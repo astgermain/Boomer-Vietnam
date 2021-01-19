@@ -14,8 +14,15 @@ import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import MenuIcon from "@material-ui/icons/Menu";
 import MenuOpenIcon from "@material-ui/icons/MenuOpen";
+import CancelPresentationIcon from "@material-ui/icons/CancelPresentation";
 import Grid from "@material-ui/core/Grid";
+import Link from "@material-ui/core/Link";
+import Typography from "@material-ui/core/Typography";
+import Container from "@material-ui/core/Container";
+import Pagination from "@material-ui/lab/Pagination";
+import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 import "../styles/header.css";
+import Logo from "./BoomerVietnam.png";
 
 const useStyles = makeStyles({
   list: {
@@ -32,6 +39,7 @@ const Header = () => {
     right: false,
   });
   const [opened, setOpened] = useState(false);
+  const preventDefault = (event) => event.preventDefault();
   const toggleDrawer = (anchor, open) => (event) => {
     if (
       event.type === "keydown" &&
@@ -46,7 +54,7 @@ const Header = () => {
   let anchor = "right";
   let menuIcon = () => {
     if (opened) {
-      return <MenuOpenIcon />;
+      return <CancelPresentationIcon />;
     } else {
       return <MenuIcon />;
     }
@@ -88,17 +96,88 @@ const Header = () => {
   );
 
   return (
-    <header className="header">
-      <Grid container direction="row" justify="flex-end" alignItems="center">
-        <Button onClick={toggleDrawer(anchor, true)}>{menuIcon()}</Button>
-        <Drawer
-          anchor={anchor}
-          open={state[anchor]}
-          onClose={toggleDrawer(anchor, false)}
+    <header>
+      <Container
+        maxWidth={false}
+        style={{ backgroundColor: "white", height: "150px" }}
+      >
+        <Typography
+          component="div"
+          style={{ backgroundColor: "white", height: "150px", display: "flex" }}
         >
-          {list(anchor)}
-        </Drawer>
-      </Grid>
+          <Grid
+            container
+            direction="row"
+            justify="center"
+            alignItems="center"
+            alignContent="center"
+            xs={5}
+          >
+            <Link href="#" onClick={preventDefault}>
+              <img src={Logo} alt="Logo" />
+            </Link>
+          </Grid>
+          <Grid
+            container
+            direction="row"
+            justify="center"
+            alignItems="center"
+            xs={7}
+          >
+            <Typography
+              component="nav"
+              style={{
+                color: "black",
+                height: "100px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Link href="#" onClick={preventDefault}>
+                <Typography
+                  component="span"
+                  style={{ paddingLeft: "25px", paddingRight: "25px", fontWeight: "600" }}
+                >
+                  Home
+                </Typography>
+              </Link> 
+              <Link href="#" onClick={preventDefault}>
+              <Typography
+                  component="span"
+                  style={{ paddingLeft: "25px", paddingRight: "25px", fontWeight: "600" }}
+                >
+                  About
+                </Typography>
+              </Link>
+              <Link href="#" onClick={preventDefault}>
+              <Typography
+                  component="span"
+                  style={{ paddingLeft: "25px", paddingRight: "25px", fontWeight: "600" }}
+                >
+                  Services
+                </Typography>
+              </Link>
+              <Link href="#" onClick={preventDefault}>
+              <Typography
+                  component="span"
+                  style={{ paddingLeft: "25px", paddingRight: "25px", fontWeight: "600" }}
+                >
+                  Contact Us
+                </Typography>
+              </Link>
+              <Button onClick={toggleDrawer(anchor, true)}>{menuIcon()}</Button>
+              <Drawer
+                anchor={anchor}
+                open={state[anchor]}
+                onClose={toggleDrawer(anchor, false)}
+              >
+                {list(anchor)}
+              </Drawer>
+            </Typography>
+          </Grid>
+        </Typography>
+      </Container>
     </header>
   );
 };

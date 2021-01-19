@@ -1,13 +1,14 @@
 .header {
-    padding: 15px;
+    padding-top: 25px;
+    display: flex;
 }
 
 .header-left {
-    width: 50%;
+    width: 40%;
 }
 
 .header-right {
-    float: right;
+    width: 60%;
 }
 
 .header-logo {

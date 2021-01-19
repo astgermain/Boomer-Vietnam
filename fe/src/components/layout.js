@@ -4,6 +4,19 @@ import Header from "./header";
 import Footer from "./footer";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
+import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#000000",
+    },
+    secondary: {
+      main: '#11cb5f',
+    },
+  },
+});
 
 const Layout = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`;
@@ -15,8 +28,10 @@ const Layout = ({ location, children }) => {
   } else {
     content = children;
   }
+  
 
   return (
+    <ThemeProvider theme={theme}>
     <main>
       <Helmet>
         <link
@@ -30,12 +45,12 @@ const Layout = ({ location, children }) => {
       </Helmet>
 
       <CssBaseline />
-      <Container maxWidth="lg">
+      
         <Header />
         {content}
         <Footer />
-      </Container>
     </main>
+    </ThemeProvider>
   );
 };
 
