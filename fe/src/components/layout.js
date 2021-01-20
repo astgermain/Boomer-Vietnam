@@ -26,7 +26,13 @@ const Layout = ({ location, children }) => {
   if (isRootPath) {
     content = children;
   } else {
-    content = children;
+    content = (
+      <>
+      <Header />
+      {children}
+      <Footer />
+      </>
+    )
   }
   
 
@@ -46,9 +52,9 @@ const Layout = ({ location, children }) => {
 
       <CssBaseline />
       
-        <Header />
+        
         {content}
-        <Footer />
+        
     </main>
     </ThemeProvider>
   );

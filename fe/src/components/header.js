@@ -96,14 +96,14 @@ const Header = () => {
   );
 
   return (
-    <header>
+    <header className="header">
       <Container
         maxWidth={false}
-        style={{ backgroundColor: "white", height: "150px" }}
+        style={{ backgroundColor: "white", height: "125px" }}
       >
         <Typography
           component="div"
-          style={{ backgroundColor: "white", height: "150px", display: "flex" }}
+          style={{ backgroundColor: "white", height: "125px", display: "flex" }}
         >
           <Grid
             container

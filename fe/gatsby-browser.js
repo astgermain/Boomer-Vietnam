@@ -10,3 +10,15 @@ exports.wrapPageElement = ({ element, props }) => {
   // including location, data, etc - you don't need to pass it
   return <Layout {...props}>{element}</Layout>
 }
+
+exports.shouldUpdateScroll = ({
+  routerProps: { location },
+  getSavedScrollPosition
+}) => {
+
+  if (location.hash) {
+    return false;
+  }
+
+  return true;
+};

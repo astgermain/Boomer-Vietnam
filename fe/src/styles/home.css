@@ -1,0 +1,102 @@
+body {
+    background-color: white !important;
+}
+
+.section {
+    display: flex !important;
+    padding-top: 125px;
+}
+
+.g-row{
+    justify-content: center;
+    align-self: center;
+    display: flex;
+    text-align: center;
+    height: calc(100vh - 125px);
+}
+.g-row-start1{
+    justify-content: center;
+    align-self: center;
+    display: flex;
+    text-align: center;
+    height: calc(.65 * (100vh - 125px));
+}
+.g-row-start2{
+    justify-content: center;
+    align-self: center;
+    display: flex;
+    text-align: center;
+    height: calc(.35 * (100vh - 125px));
+    background: white;
+    margin: 0 12.5vw !important;
+}
+.g-row-start3{
+    justify-content: center;
+    align-self: center;
+    display: flex;
+    text-align: center;
+    height: calc(100vh - 125px);
+    background: white;
+}
+
+.g-row-cell {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: white;
+    
+}
+
+.g-row-header {
+    display: flex;
+    align-items: flex-end;
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.section-p2 {
+    margin: 0 12.5vw;
+    height: calc(100vh - 125px)
+}
+.section-p3 {
+    margin: 0 12.5vw;
+    height: calc(100vh - 125px)
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.infographics {
+    justify-content: space-between !important;
+}
+
+.boxes {
+    flex-flow: column;
+}
+
+
+
+.box-container {
+}

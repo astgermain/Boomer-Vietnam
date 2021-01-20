@@ -1,6 +1,10 @@
 .header {
-    padding-top: 25px;
     display: flex;
+    background: white;
+    z-index: 20;
+    position: absolute;
+    width: 100vw;
+    border-bottom: 1px solid gainsboro;
 }
 
 .header-left {

@@ -1,10 +1,11 @@
 import React from "react";
 import { Helmet } from "react-helmet"
+import "../styles/footer.css"
 
 const Footer = () => {
 
     return (
-        <footer>
+        <footer className="footer">
             Footer
         </footer>
     )
