@@ -33,7 +33,7 @@ const useStyles = makeStyles({
   },
 });
 
-const Header = ({fullpageApi}) => {
+const MobileHeader = ({fullpageApi}) => {
   const classes = useStyles();
   const [state, setState] = useState({
     right: false,
@@ -111,57 +111,24 @@ const Header = ({fullpageApi}) => {
     <header className="header">
       <Container
         maxWidth={false}
-        style={{ backgroundColor: "white", height: "125px", padding: "0", marginLeft: "12.5vw", marginRight: "12.5vw" }}
+        style={{ backgroundColor: "white", height: "100px", padding: "0", marginLeft: "12.5vw", marginRight: "12.5vw" }}
       >
         <Typography
           component="div"
-          style={{ backgroundColor: "white", height: "125px", display: "flex" }}
+          style={{ backgroundColor: "white", height: "100px", display: "flex" }}
         >
           <Grid
             container
             direction="row"
-            justify="flex-start"
+            justify="center"
             alignItems="center"
             alignContent="center"
-            xs={5}
+            xs={12}
           >
             <Link href="#" onClick={moveTo1}>
               <img src={Logo} alt="Logo" />
             </Link>
-          </Grid>
-          <Grid
-            container
-            direction="row"
-            justify="flex-end"
-            alignItems="center"
-            xs={7}
-          >
-            <Typography
-              component="nav"
-              style={{
-                color: "black",
-                height: "100px",
-                display: "flex",
-                justifyContent: "space-evenly",
-                alignItems: "center",
-                width: "100%",
-                maxWidth: "500px",
-              }}
-             className="header-links"
-            >
-              <Link href="#" onClick={moveTo1} className="header-link">
-                  Home
-              </Link> 
-              <Link href="#" onClick={moveTo2} className="header-link">
-                  Services
-              </Link>
-              <Link href="#" onClick={moveTo3} className="header-link">
-                  About
-              </Link>
-              <Link href="#" onClick={moveTo4} className="header-link">
-                  Contact Us
-              </Link>
-              <Button className="ham-button" onClick={toggleDrawer(anchor, true)}>{menuIcon()}</Button>
+            <Button className="ham-button-m" onClick={toggleDrawer(anchor, true)}>{menuIcon()}</Button>
               <Drawer
                 anchor={anchor}
                 open={state[anchor]}
@@ -169,12 +136,12 @@ const Header = ({fullpageApi}) => {
               >
                 {list(anchor)}
               </Drawer>
-            </Typography>
           </Grid>
+          
         </Typography>
       </Container>
     </header>
   );
 };
 
-export default Header;
+export default MobileHeader;

@@ -39,26 +39,28 @@ export default function CardGraphic({ hasColor, svg, hasColor2, isBox }) {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
   let g = classes.root;
-  let h, i, j
+  let h, i, j, k;
   if (hasColor) {
     g = `hasColor`;
-  }
-  else if (hasColor2){
-    g = `hasColorBox box`
-    h = `card-content2`
-    i = `top-content2`
-    j = `bottom-content2`
-  }
-  else if (isBox){
+    k = `colorText`;
+    h = `card-content`;
+    i = `top-content`;
+    j = `bottom-content`;
+  } else if (hasColor2) {
+    g = `hasColorBox box`;
+    h = `card-content2`;
+    i = `top-content2`;
+    j = `bottom-content2`;
+    k = `colorText`;
+  } else if (isBox) {
     g = `box`;
-    h = `card-content2`
-    i = `top-content2`
-    j = `bottom-content2`
-  }
-  else {
-    h = `card-content`
-    i = `top-content`
-    j = `bottom-content`
+    h = `card-content2`;
+    i = `top-content2`;
+    j = `bottom-content2`;
+  } else {
+    h = `card-content`;
+    i = `top-content`;
+    j = `bottom-content`;
   }
   return (
     <Card className={g} variant="outlined">
@@ -70,7 +72,7 @@ export default function CardGraphic({ hasColor, svg, hasColor2, isBox }) {
           <Grid container>
             <Grid item xs={12}>
               <Typography
-                className={`${classes.title} first-card-text`}
+                className={`${classes.title} first-card-text ${k}`}
                 color="textSecondary"
                 gutterBottom
               >
@@ -81,7 +83,7 @@ export default function CardGraphic({ hasColor, svg, hasColor2, isBox }) {
               <Typography
                 variant="body2"
                 component="p"
-                className="second-card-text"
+                className={`second-card-text ${k}`}
               >
                 well meaning and kindly.
               </Typography>

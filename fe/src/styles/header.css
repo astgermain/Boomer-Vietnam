@@ -14,8 +14,16 @@
 .header-right {
     width: 60%;
 }
-
-.header-logo {
-
+.ham-button-m {
+    margin-bottom: 10px !important;
+    position: absolute !important;
+    right: 25px;
 }
 
+.ham-button {
+    margin-bottom: 10px !important;
+}
+.ham-button:hover {
+    background-color: rgb(1 162 198 / 33%) !important;
+    border-radius: 0 !important;
+}
