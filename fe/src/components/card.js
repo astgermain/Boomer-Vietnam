@@ -35,7 +35,13 @@ const useStyles = makeStyles({
   },
 });
 
-export default function CardGraphic({ hasColor, svg, hasColor2, isBox }) {
+export default function CardGraphic({
+  hasColor,
+  svg,
+  hasColor2,
+  isBox,
+  handleChange,
+}) {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
   let g = classes.root;
@@ -69,7 +75,7 @@ export default function CardGraphic({ hasColor, svg, hasColor2, isBox }) {
           <SVG name={svg} />
         </div>
         <div className={j}>
-          <Grid container>
+          <Grid container xs={12}>
             <Grid item xs={12}>
               <Typography
                 className={`${classes.title} first-card-text ${k}`}
@@ -78,8 +84,7 @@ export default function CardGraphic({ hasColor, svg, hasColor2, isBox }) {
               >
                 Word of the Day
               </Typography>
-            </Grid>
-            <Grid item xs={12}>
+
               <Typography
                 variant="body2"
                 component="p"
@@ -88,14 +93,15 @@ export default function CardGraphic({ hasColor, svg, hasColor2, isBox }) {
                 well meaning and kindly.
               </Typography>
             </Grid>
+        
+            <CardActions className="card-action">
+              <Button size="small" onClick={handleChange} className="card-button">
+                Learn More
+              </Button>
+            </CardActions>
           </Grid>
         </div>
       </CardContent>
-      {/*
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-      */}
     </Card>
   );
 }

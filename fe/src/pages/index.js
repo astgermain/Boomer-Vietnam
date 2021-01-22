@@ -11,6 +11,7 @@ import Footer from "../components/footer";
 import CardGraphic from "../components/card";
 import Hidden from "@material-ui/core/Hidden";
 import withWidth from "@material-ui/core/withWidth";
+import Slide from "@material-ui/core/Slide";
 import "../styles/style.css";
 
 // NOTE: if using fullpage extensions/plugins put them here and pass it as props.
@@ -23,6 +24,47 @@ const pluginWrapper = () => {
 
 const IndexPage = ({ data, location, width }) => {
   const [toTop, setToTop] = useState(null);
+  const [banner, setBanner] = useState("default");
+  const [find, setFind] = useState(false);
+  const [plan, setPlan] = useState(false);
+  const [make, setMake] = useState(false);
+  const [ship, setShip] = useState(false);
+  const [start, setStart] = useState(false);
+  let handleBack = () => {
+    setBanner(`default`)
+  }
+  let handlePlan = () => {
+    setBanner(`plan`)
+    setPlan(true)
+    setFind(false)
+    setMake(false)
+    setShip(false)
+    setStart(true)
+  }
+  let handleFind = () => {
+    setBanner(`find`)
+    setPlan(false)
+    setFind(true)
+    setMake(false)
+    setShip(false)
+    setStart(true)
+  }
+  let handleMake = () => {
+    setBanner(`make`)
+    setPlan(false)
+    setFind(false)
+    setMake(true)
+    setShip(false)
+    setStart(true)
+  }
+  let handleShip = () => {
+    setBanner(`ship`)
+    setPlan(false)
+    setFind(false)
+    setMake(false)
+    setShip(true)
+    setStart(true)
+  }
   return (
     <>
       <title>Boomer Vietnam</title>
@@ -30,7 +72,7 @@ const IndexPage = ({ data, location, width }) => {
         <MobileHeader />
       </Hidden>
       <Hidden smDown>
-      <Header fullpageApi={toTop} />
+        <Header fullpageApi={toTop} />
       </Hidden>
       <ReactFullpage
         debug /* Debug logging */
@@ -67,12 +109,91 @@ const IndexPage = ({ data, location, width }) => {
                           </Button>
                         </Grid>
                       </Grid>
-                      <Grid item xs={7} className="g-row-cell-s1">
-                        <img
-                          src="./static/section1img.png"
-                          className="s1-image"
-                        ></img>
-                      </Grid>
+                      {banner == "default" && (
+                        <Slide
+                        direction="left"
+                        in={true}
+                        appear={start}
+                        timeout={750}
+                        mountOnEnter
+                        unmountOnExit
+                      >
+                        <Grid item xs={7} className="g-row-cell-s1">
+                          <img
+                            src="./static/section1img.png"
+                            className="s1-image"
+                          ></img>
+                        </Grid>
+                        </Slide>
+                      )}
+                      {banner == "plan" && (
+                        <Slide
+                          direction="left"
+                          in={true}
+                          timeout={750}
+                          mountOnEnter
+                          unmountOnExit
+                        >
+                          <Grid item xs={7} className="g-row-cell-s1">
+                            <button onClick={handleBack}>Back</button>
+                            <img
+                              src="./static/section1img1.png"
+                              className="s1-image"
+                            ></img>
+                          </Grid>
+                        </Slide>
+                      )}
+                      {banner == "find" && (
+                        <Slide
+                          direction="left"
+                          in={true}
+                          timeout={750}
+                          mountOnEnter
+                          unmountOnExit
+                        >
+                          <Grid item xs={7} className="g-row-cell-s1">
+                            <button onClick={handleBack}>Back</button>
+                            <img
+                              src="./static/section1img2.png"
+                              className="s1-image"
+                            ></img>
+                          </Grid>
+                        </Slide>
+                      )}
+                      {banner == "make" && (
+                        <Slide
+                          direction="left"
+                          in={true}
+                          timeout={750}
+                          mountOnEnter
+                          unmountOnExit
+                        >
+                          <Grid item xs={7} className="g-row-cell-s1">
+                            <button onClick={handleBack}>Back</button>
+                            <img
+                              src="./static/section1img3.png"
+                              className="s1-image"
+                            ></img>
+                          </Grid>
+                        </Slide>
+                      )}
+                      {banner == "ship" && (
+                        <Slide
+                          direction="left"
+                          in={true}
+                          timeout={750}
+                          mountOnEnter
+                          unmountOnExit
+                        >
+                          <Grid item xs={7} className="g-row-cell-s1">
+                            <button onClick={handleBack}>Back</button>
+                            <img
+                              src="./static/section1img4.png"
+                              className="s1-image"
+                            ></img>
+                          </Grid>
+                        </Slide>
+                      )}
                     </Grid>
                     <Grid container className="g-row-start2">
                       <Grid
@@ -80,10 +201,10 @@ const IndexPage = ({ data, location, width }) => {
                         xs={12}
                         className="g-row-cell-s2 infographics"
                       >
-                        <CardGraphic svg="check" />
-                        <CardGraphic svg="building" hasColor={true} />
-                        <CardGraphic svg="world" />
-                        <CardGraphic svg="clipboard" />
+                        <CardGraphic svg="check" hasColor={plan} handleChange={handlePlan}/>
+                        <CardGraphic svg="building" hasColor={find} handleChange={handleFind}/>
+                        <CardGraphic svg="world" hasColor={make} handleChange={handleMake}/>
+                        <CardGraphic svg="clipboard" hasColor={ship} handleChange={handleShip}/>
                       </Grid>
                     </Grid>
                   </Hidden>
