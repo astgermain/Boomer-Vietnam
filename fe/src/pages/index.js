@@ -32,6 +32,10 @@ const IndexPage = ({ data, location, width }) => {
   const [start, setStart] = useState(false);
   let handleBack = () => {
     setBanner(`default`)
+    setPlan(false)
+    setFind(false)
+    setMake(false)
+    setShip(false)
   }
   let handlePlan = () => {
     setBanner(`plan`)
@@ -201,10 +205,10 @@ const IndexPage = ({ data, location, width }) => {
                         xs={12}
                         className="g-row-cell-s2 infographics"
                       >
-                        <CardGraphic svg="check" hasColor={plan} handleChange={handlePlan}/>
-                        <CardGraphic svg="building" hasColor={find} handleChange={handleFind}/>
-                        <CardGraphic svg="world" hasColor={make} handleChange={handleMake}/>
-                        <CardGraphic svg="clipboard" hasColor={ship} handleChange={handleShip}/>
+                        <CardGraphic svg="check" h1text="Plan" h2text="Product Planning + Validation" hasColor={plan} handleChange={handlePlan}/>
+                        <CardGraphic svg="building" h1text="Find" h2text="Sourcing + Samples" hasColor={find} handleChange={handleFind}/>
+                        <CardGraphic svg="world" h1text="Make" h2text="Inspection + Production" hasColor={make} handleChange={handleMake}/>
+                        <CardGraphic svg="clipboard" h1text="Ship" h2text="Shipping + Prep Guidance" hasColor={ship} handleChange={handleShip}/>
                       </Grid>
                     </Grid>
                   </Hidden>

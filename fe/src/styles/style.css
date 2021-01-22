@@ -91,7 +91,7 @@ body {
   align-self: center;
   display: flex;
   text-align: center;
-  height: calc(0.5 * (100vh - 125px));
+  height: calc(0.65 * (100vh - 125px));
   border-bottom: 1px solid gainsboro !important;
 }
 .g-row-start2 {
@@ -99,7 +99,7 @@ body {
   align-self: center;
   display: flex;
   text-align: center;
-  height: calc(0.5 * (100vh - 125px));
+  height: calc(0.35 * (100vh - 125px));
   background: white;
 }
 .g-row-start3 {

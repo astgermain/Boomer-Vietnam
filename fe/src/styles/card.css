@@ -5,8 +5,8 @@
     height: 15vw !important;
     min-width: 15vh;
     min-height: 15vh;
-    max-width: 250px;
-    max-height: 250px;
+    max-width: 150px;
+    max-height: 150px;
     display: flex;
 }
 
@@ -48,6 +48,7 @@
 .card-content {
     text-align: start;
     width: 100%;
+    padding: 10px !important;
 }
 
 .card-content2 {
@@ -91,6 +92,11 @@
 .first-card-text {
     color: #00A1C6 !important;
     font-weight: 600 !important;
+}
+.second-card-text {
+    color:black !important;
+    font-weight: 600 !important;
+    font-size: .675rem !important;
 }
 
 .colorText {

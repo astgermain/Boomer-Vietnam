@@ -18,8 +18,8 @@ const useStyles = makeStyles({
     width: "15vw",
     minWidth: "15vh",
     minHeight: "15vh",
-    maxWidth: "250px",
-    maxHeight: "250px",
+    maxWidth: "150px",
+    maxHeight: "150px",
     display: "flex",
   },
   bullet: {
@@ -41,6 +41,8 @@ export default function CardGraphic({
   hasColor2,
   isBox,
   handleChange,
+  h1text,
+  h2text
 }) {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
@@ -69,6 +71,7 @@ export default function CardGraphic({
     j = `bottom-content`;
   }
   return (
+    <Button size="small" onClick={handleChange} className="card-button">
     <Card className={g} variant="outlined">
       <CardContent className={h}>
         <div className={i}>
@@ -82,7 +85,7 @@ export default function CardGraphic({
                 color="textSecondary"
                 gutterBottom
               >
-                Word of the Day
+                {h1text}
               </Typography>
 
               <Typography
@@ -90,18 +93,15 @@ export default function CardGraphic({
                 component="p"
                 className={`second-card-text ${k}`}
               >
-                well meaning and kindly.
+                {h2text}
               </Typography>
             </Grid>
         
-            <CardActions className="card-action">
-              <Button size="small" onClick={handleChange} className="card-button">
-                Learn More
-              </Button>
-            </CardActions>
+        
           </Grid>
         </div>
       </CardContent>
     </Card>
+    </Button>
   );
 }
