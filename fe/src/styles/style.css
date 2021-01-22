@@ -92,6 +92,7 @@ body {
   display: flex;
   text-align: center;
   height: calc(0.5 * (100vh - 125px));
+  border-bottom: 1px solid gainsboro !important;
 }
 .g-row-start2 {
   justify-content: center;
@@ -121,7 +122,9 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: space-evenly;
-  background: #ecedee;
+  background: white;
+  height: 100%;
+  border-left: 1px solid gainsboro;
 }
 
 .g-row-cell-s2 {
@@ -154,6 +157,7 @@ body {
 .s1-image {
     width: 100%;
     max-width: 800px;
+    height: 100%;
 }
 
 .s1-p1-move {
