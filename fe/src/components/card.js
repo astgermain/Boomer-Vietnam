@@ -13,13 +13,13 @@ import "../styles/card.css";
 const useStyles = makeStyles({
   root: {
     borderRadius: 0,
-    backgroundColor: "#FAFAFA",
-    height: "15vw",
-    width: "15vw",
-    minWidth: "15vh",
-    minHeight: "15vh",
-    maxWidth: "150px",
-    maxHeight: "150px",
+    backgroundColor: "#00A1C6",
+    height: "22.5vh",
+    width: "22.5vh",
+    minWidth: "12.5vh",
+    minHeight: "12.5vh",
+    maxWidth: "16.5vw",
+    maxHeight: "16.5vw",
     display: "flex",
   },
   bullet: {
@@ -50,7 +50,6 @@ export default function CardGraphic({
   let h, i, j, k;
   if (hasColor) {
     g = `hasColor`;
-    k = `colorText`;
     h = `card-content`;
     i = `top-content`;
     j = `bottom-content`;
@@ -59,16 +58,17 @@ export default function CardGraphic({
     h = `card-content2`;
     i = `top-content2`;
     j = `bottom-content2`;
-    k = `colorText`;
   } else if (isBox) {
     g = `box`;
     h = `card-content2`;
     i = `top-content2`;
     j = `bottom-content2`;
+    k = `colorText`;
   } else {
     h = `card-content`;
     i = `top-content`;
     j = `bottom-content`;
+    k = `colorText`;
   }
   return (
     <Button size="small" onClick={handleChange} className="card-button">

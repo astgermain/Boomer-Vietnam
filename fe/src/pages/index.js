@@ -200,6 +200,7 @@ const IndexPage = ({ data, location, width }) => {
                       )}
                     </Grid>
                     <Grid container className="g-row-start2">
+                      {/* <h1>Click to learn more</h1> */}
                       <Grid
                         container
                         xs={12}
