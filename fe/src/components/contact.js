@@ -2,14 +2,22 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import TextField from "@material-ui/core/TextField";
 import Alert from "@material-ui/lab/Alert";
-import Button from '@material-ui/core/Button';
+import Button from "@material-ui/core/Button";
+import Grid from "@material-ui/core/Grid";
+import Collapse from "@material-ui/core/Collapse";
 
 const LAMBDA_URL =
   "https://qbq13jjtbc.execute-api.us-west-1.amazonaws.com/Production";
 const required = "This field is required";
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
-  const [value, setValue] = React.useState("Name");
+  const [value, setValue] = useState("Name");
+  const [openName, setOpenName] = useState(false);
+  const [openE, setOpenE] = useState(false);
+  const [openQ, setOpenQ] = useState(false);
+  const handleOpenName = () => {setOpenName(!openName)};
+  const handleOpenE = () => {setOpenE(!openE)};
+  const handleOpenQ = () => {setOpenQ(!openQ)};
   const handleChange = (event) => {
     setValue(event.target.value);
   };
@@ -24,6 +32,7 @@ const Contact = () => {
   } = methods;
 
   const onSubmit = async (data) => {
+    console.log("hu");
     try {
       await fetch(LAMBDA_URL, {
         method: "POST",
@@ -35,8 +44,10 @@ const Contact = () => {
         },
       });
       setSubmitted(true);
+
       reset();
     } catch (error) {
+      console.log("methods", methods);
       setError(
         "submit",
         "submitError",
@@ -52,7 +63,12 @@ const Contact = () => {
       <Alert onClose={() => {}} variant="outlined" severity="success">
         Your message was sent!
       </Alert>
-      <Button color="primary" onClick={() => setSubmitted(false)}>
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={() => setSubmitted(false)}
+        className="spacing-contact"
+      >
         Send another message?
       </Button>
     </div>
@@ -60,19 +76,23 @@ const Contact = () => {
 
   const showForm = (
     <form onSubmit={handleSubmit(onSubmit)} method="post">
-      <label htmlFor="name">
-        <TextField
-          inputRef={register({ required })}
-          id="name"
-          type="text"
-          name="name"
-          label="Name"
-          rowsMax={1}
-          variant="outlined"
-          disabled={isSubmitting}
-        />
+      <Grid item xs={12} className="spacing-contact">
+        <label htmlFor="name">
+          <TextField
+            inputRef={register({ required })}
+            id="name"
+            type="text"
+            name="name"
+            label="Name"
+            rowsMax={1}
+            fullWidth
+            size="small"
+            variant="outlined"
+            disabled={isSubmitting}
+            error={errors.name}
+          />
 
-        {/*
+          {/*
         <input
           type="text"
           name="name"
@@ -82,67 +102,68 @@ const Contact = () => {
           disabled={isSubmitting}
         />
         */}
-      </label>
-
-      <label htmlFor="email">
-        <TextField
-          inputRef={register({ required })}
-          type="email"
-          name="email"
-          id="email"
-          label="E-Mail Address"
-          rowsMax={1}
-          variant="outlined"
-          disabled={isSubmitting}
-        />
-      </label>
-
-      <label htmlFor="question">
-        <TextField
-          inputRef={register({ required })}
-          type="text"
-          name="question"
-          id="question"
-          label="Your Message"
-          multiline
-          rowsMax={8}
-          variant="outlined"
-          disabled={isSubmitting}
-        />
-      </label>
+        </label>
+      </Grid>
+      <Grid item xs={12} className="spacing-contact">
+        <label htmlFor="email">
+          <TextField
+            inputRef={register({ required })}
+            type="email"
+            name="email"
+            id="email"
+            label="E-Mail Address"
+            rowsMax={1}
+            fullWidth
+            size="small"
+            variant="outlined"
+            disabled={isSubmitting}
+            error={errors.email}
+          />
+        </label>
+      </Grid>
+      <Grid item xs={12} className="spacing-contact">
+        <label htmlFor="question">
+          <TextField
+            inputRef={register({ required })}
+            type="text"
+            name="question"
+            id="outlined-full-width"
+            label="Your Message"
+            multiline
+            rows={4}
+            fullWidth
+            size="small"
+            variant="outlined"
+            disabled={isSubmitting}
+            error={errors.question}
+          />
+        </label>
+      </Grid>
 
       <div className="submit-wrapper">
-        <button type="submit" disabled={isSubmitting}>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => setSubmitted(false)}
+          className="spacing-contact"
+          disabled={isSubmitting}
+          type="submit"
+        >
           Send
-        </button>
+        </Button>
       </div>
     </form>
   );
 
   return (
     <div className="contact-page">
+      {errors && errors.submit && (
+        <Alert variant="outlined" severity="error" className="spacing-contact">
+          Your message wasn't sent, there seems to be an issue!
+        </Alert>
+      )}
       <div className="text-side">
-        <h2>Contact me</h2>
-        {errors.name && (
-          <Alert onClose={() => {}} variant="outlined" severity="warning">
-            Name is required!
-          </Alert>
-        )}
-        {errors.email && (
-          <Alert onClose={() => {}} variant="outlined" severity="warning">
-            E-Mail is required!
-          </Alert>
-        )}
-        {errors.question && (
-          <Alert onClose={() => {}} variant="outlined" severity="warning">
-            Please include a message
-          </Alert>
-        )}
-        {errors && errors.submit && (
-          <Alert onClose={() => {}} variant="outlined" severity="error">
-            Your message wasn't sent, there seems to be an issue!
-          </Alert>
-        )}
+        <h2>Contact Us</h2>
       </div>
       <div className="form-side">{submitted ? showThankYou : showForm}</div>
     </div>

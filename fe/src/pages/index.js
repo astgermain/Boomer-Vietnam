@@ -607,12 +607,13 @@ const IndexPage = ({ data, location, width }) => {
                 </section>
               </div>
               <div className="section fsection fp-auto-height">
-                <section className="">
+                <section className="section-p4">
                   <Contact />
-                  <Footer fullpageApi={fullpageApi} />
                 </section>
               </div>
-              
+              <div className="section fp-auto-height">
+                <Footer fullpageApi={fullpageApi} />
+              </div>
             </ReactFullpage.Wrapper>
           );
         }}

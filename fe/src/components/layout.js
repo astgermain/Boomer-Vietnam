@@ -38,7 +38,7 @@ const Layout = ({ location, children }) => {
 
   return (
     <ThemeProvider theme={theme}>
-    <main>
+    <main className="main">
       <Helmet>
         <link
           rel="stylesheet"

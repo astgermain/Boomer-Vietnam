@@ -60,6 +60,11 @@
 
 body {
   background-color: white !important;
+  background-image: url(http://localhost:8000/static/BoomerVietnamPattern.png);
+  background-size: contain;
+}
+.main {
+    margin: 0 12.5vw;
 }
 
 .section {
@@ -92,6 +97,8 @@ body {
   display: flex;
   text-align: center;
   height: calc(0.65 * (100vh - 125px));
+  margin: 0 12.5vw;
+  background: white;
 }
 .g-row-start2 {
   justify-content: center;
@@ -107,21 +114,18 @@ body {
   display: flex;
   text-align: center;
   height: calc(100vh - 125px);
-  background: white;
 }
 
 .g-row-cell {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background: white;
 }
 
 .g-row-cell-s1 {
   display: flex;
   align-items: flex-end;
   justify-content: space-evenly;
-  background: white;
   height: 100%;
 }
 
@@ -129,14 +133,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background: white;
-  margin: 0 12.5vw !important;
 }
 .g-row-cell-boxes {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background: white;
   padding-right: 15px;
 }
 
@@ -149,7 +150,6 @@ body {
 }
 
 .p2-background {
-  background: #e0f1f6;
 }
 
 .s1-image {
@@ -157,13 +157,11 @@ body {
   display: flex;
   justify-content: center;
   align-self: center;
-  margin-left: 12.5vw !important;
   max-height: calc(0.45 * (100vh - 125px));
   max-width: calc(0.41 * (100vw - 12.5vw));
 }
 
 .s1-p1-move {
-  margin-right: 12.5vw !important;
   text-align: left;
   margin-left: 5vw;
 }
@@ -182,12 +180,20 @@ body {
 .section-p2 {
   margin: 0 12.5vw;
   height: calc(100vh - 125px);
-  background-color: #fafafa;
+  background: white;
 }
 .section-p3 {
   margin: 0 12.5vw;
   height: calc(100vh - 125px);
-  background-color: white;
+  background: white;
+}
+.section-p4 {
+  height: calc(100vh - 125px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 12.5vw;
+  background: white;
 }
 
 .red {
@@ -274,4 +280,25 @@ body {
 
 .adjust-left {
   margin-left: 10px;
+}
+
+.contact-page {
+  margin: 0 12.5vw;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: calc(100%);
+  justify-content: center;
+}
+
+.spacing-contact {
+  margin: 15px 0 !important;
+}
+.spacing-contact2 {
+  margin: 5px 0 !important;
+}
+
+.form-side {
+  width: 100%;
+  max-width: 500px;
 }

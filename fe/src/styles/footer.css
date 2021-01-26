@@ -3,7 +3,9 @@
     background: #fafafa;
     padding: 15px 0;
     border-top: 1px solid gainsboro;
+    margin: 0 -12.5vw;
 }
+
 .footer-container {
   margin: 0 12.5vw;
 }

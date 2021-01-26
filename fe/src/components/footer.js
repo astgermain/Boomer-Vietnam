@@ -231,7 +231,7 @@ const Footer = ({ fullpageApi }) => {
             </span>
             <br></br>
             <span className="footer-text-reg">
-              <b>E-Mail:</b> Info@BoomerNaturals.com
+              <b>E-Mail:</b> info@BoomerVietnam.com
             </span>
             </div>
           </div>

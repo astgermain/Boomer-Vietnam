@@ -5,6 +5,7 @@
     position: absolute;
     width: 100vw;
     border-bottom: 1px solid gainsboro;
+    margin-left: -12.5vw;
 }
 
 .header-left {
