@@ -88,24 +88,29 @@ const Contact = () => {
 
       <label htmlFor="email">
         <h5>Email</h5>
-        <input
+        <TextField
+          inputRef={register({ required })}
           type="email"
           name="email"
           id="email"
-          placeholder="E-Mail Address"
-          ref={register({ required })}
+          label="E-Mail Address"
+          rowsMax={1}
+          variant="outlined"
           disabled={isSubmitting}
         />
       </label>
 
       <label htmlFor="question">
         <h5>Message</h5>
-        <textarea
-          ref={register({ required })}
+        <TextField
+          inputRef={register({ required })}
+          type="text"
           name="question"
           id="question"
-          rows="3"
-          placeholder="Message"
+          label="Your Message"
+          multiline
+          rowsMax={8}
+          variant="outlined"
           disabled={isSubmitting}
         />
       </label>
