@@ -12,6 +12,7 @@ import CardGraphic from "../components/card";
 import Hidden from "@material-ui/core/Hidden";
 import withWidth from "@material-ui/core/withWidth";
 import Slide from "@material-ui/core/Slide";
+import Contact from "../components/contact"
 import "../styles/style.css";
 
 // NOTE: if using fullpage extensions/plugins put them here and pass it as props.
@@ -370,7 +371,11 @@ const IndexPage = ({ data, location, width }) => {
                   </Grid>
                 </section>
               </div>
-
+              <div className="section fsection fp-auto-height">
+                <section className="section-p2">
+                <Contact />
+                </section>
+              </div>
               <div className="section fp-auto-height">
                 <Footer fullpageApi={fullpageApi} />
               </div>

@@ -19,7 +19,6 @@ const Footer = ({ fullpageApi }) => {
       <div className="footer-container">
         <div className="footer-top">
           <div className="footer-top-left">
-            
           </div>
           <div className="footer-top-middle">
             <Link to="/" className="footer-top-logo">
