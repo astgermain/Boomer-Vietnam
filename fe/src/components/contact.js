@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import TextField from "@material-ui/core/TextField";
 import Alert from "@material-ui/lab/Alert";
+import Button from '@material-ui/core/Button';
 
 const LAMBDA_URL =
   "https://qbq13jjtbc.execute-api.us-west-1.amazonaws.com/Production";
@@ -48,9 +49,12 @@ const Contact = () => {
 
   const showThankYou = (
     <div className="msg-confirm">
-      <button type="button" onClick={() => setSubmitted(false)}>
+      <Alert onClose={() => {}} variant="outlined" severity="success">
+        Your message was sent!
+      </Alert>
+      <Button color="primary" onClick={() => setSubmitted(false)}>
         Send another message?
-      </button>
+      </Button>
     </div>
   );
 
@@ -59,7 +63,6 @@ const Contact = () => {
       <label htmlFor="name">
         <h5>Name</h5>
 
-        
         <TextField
           inputRef={register({ required })}
           id="name"
@@ -70,7 +73,7 @@ const Contact = () => {
           variant="outlined"
           disabled={isSubmitting}
         />
-        
+
         {/*
         <input
           type="text"
