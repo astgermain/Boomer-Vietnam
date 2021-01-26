@@ -104,7 +104,6 @@ const IndexPage = ({ data, location, width }) => {
         <Header fullpageApi={toTop} />
       </Hidden>
       <ReactFullpage
-        debug /* Debug logging */
         // Required when using extensions
         pluginWrapper={pluginWrapper}
         //fullpage options

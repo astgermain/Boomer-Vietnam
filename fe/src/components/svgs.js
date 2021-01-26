@@ -1,7 +1,6 @@
 import * as React from "react";
 
 export default function SVG({ name }) {
-  console.log("svg:", svg);
   //check, world, clipboard, building
   const svg = {
     check: (
