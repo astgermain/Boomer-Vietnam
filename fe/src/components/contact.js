@@ -61,8 +61,6 @@ const Contact = () => {
   const showForm = (
     <form onSubmit={handleSubmit(onSubmit)} method="post">
       <label htmlFor="name">
-        <h5>Name</h5>
-
         <TextField
           inputRef={register({ required })}
           id="name"
@@ -87,7 +85,6 @@ const Contact = () => {
       </label>
 
       <label htmlFor="email">
-        <h5>Email</h5>
         <TextField
           inputRef={register({ required })}
           type="email"
@@ -101,7 +98,6 @@ const Contact = () => {
       </label>
 
       <label htmlFor="question">
-        <h5>Message</h5>
         <TextField
           inputRef={register({ required })}
           type="text"
