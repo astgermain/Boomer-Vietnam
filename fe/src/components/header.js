@@ -161,6 +161,7 @@ const Header = ({fullpageApi}) => {
               <Link href="#" onClick={moveTo4} className="header-link">
                   Contact Us
               </Link>
+              {/*
               <Button className="ham-button" onClick={toggleDrawer(anchor, true)}>{menuIcon()}</Button>
               <Drawer
                 anchor={anchor}
@@ -169,6 +170,7 @@ const Header = ({fullpageApi}) => {
               >
                 {list(anchor)}
               </Drawer>
+              */}
             </Typography>
           </Grid>
         </Typography>

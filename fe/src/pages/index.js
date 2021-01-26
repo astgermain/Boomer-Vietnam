@@ -12,7 +12,7 @@ import CardGraphic from "../components/card";
 import Hidden from "@material-ui/core/Hidden";
 import withWidth from "@material-ui/core/withWidth";
 import Slide from "@material-ui/core/Slide";
-import Contact from "../components/contact"
+import Contact from "../components/contact";
 import "../styles/style.css";
 
 // NOTE: if using fullpage extensions/plugins put them here and pass it as props.
@@ -32,44 +32,68 @@ const IndexPage = ({ data, location, width }) => {
   const [ship, setShip] = useState(false);
   const [start, setStart] = useState(false);
   let handleBack = () => {
-    setBanner(`default`)
-    setPlan(false)
-    setFind(false)
-    setMake(false)
-    setShip(false)
-  }
+    setBanner(`default`);
+    setPlan(false);
+    setFind(false);
+    setMake(false);
+    setShip(false);
+  };
   let handlePlan = () => {
-    setBanner(`plan`)
-    setPlan(true)
-    setFind(false)
-    setMake(false)
-    setShip(false)
-    setStart(true)
-  }
+    if (banner == "plan") {
+      setBanner(`default`);
+      setPlan(false);
+      setStart(false);
+    } else {
+      setBanner(`plan`);
+      setPlan(true);
+      setFind(false);
+      setMake(false);
+      setShip(false);
+      setStart(true);
+    }
+  };
   let handleFind = () => {
-    setBanner(`find`)
-    setPlan(false)
-    setFind(true)
-    setMake(false)
-    setShip(false)
-    setStart(true)
-  }
+    if (banner == "find") {
+      setBanner(`default`);
+      setFind(false);
+      setStart(false);
+    } else {
+    setBanner(`find`);
+    setPlan(false);
+    setFind(true);
+    setMake(false);
+    setShip(false);
+    setStart(true);
+    }
+  };
   let handleMake = () => {
-    setBanner(`make`)
-    setPlan(false)
-    setFind(false)
-    setMake(true)
-    setShip(false)
-    setStart(true)
-  }
+    if (banner == "make") {
+      setBanner(`default`);
+      setMake(false);
+      setStart(false);
+    } else {
+    setBanner(`make`);
+    setPlan(false);
+    setFind(false);
+    setMake(true);
+    setShip(false);
+    setStart(true);
+    }
+  };
   let handleShip = () => {
-    setBanner(`ship`)
-    setPlan(false)
-    setFind(false)
-    setMake(false)
-    setShip(true)
-    setStart(true)
-  }
+    if (banner == "ship") {
+      setBanner(`default`);
+      setShip(false);
+      setStart(false);
+    } else {
+    setBanner(`ship`);
+    setPlan(false);
+    setFind(false);
+    setMake(false);
+    setShip(true);
+    setStart(true);
+    }
+  };
   return (
     <>
       <title>Boomer Vietnam</title>
@@ -101,21 +125,8 @@ const IndexPage = ({ data, location, width }) => {
       */}
                 <Grid container className="g-row">
                   <Hidden smDown>
-                    <Grid container lg={12} className="g-row-start1">
-                      <Grid container xs={5} className="g-row-cell">
-                        <Grid item xs={12} className="s1-p1-move">
-                          <h1 className="s1-p1-text">
-                            Consectetur<br></br>
-                            Adipiscing
-                          </h1>
-                          <Button variant="contained" className="p1-button">
-                            Lorem Ipsum {"\u00A0"}
-                            <AddCircleOutlineIcon />
-                          </Button>
-                        </Grid>
-                      </Grid>
-                      {banner == "default" && (
-                        <Slide
+                    {banner == "default" && (
+                      <Slide
                         direction="left"
                         in={true}
                         appear={start}
@@ -123,83 +134,283 @@ const IndexPage = ({ data, location, width }) => {
                         mountOnEnter
                         unmountOnExit
                       >
-                        <Grid item xs={7} className="g-row-cell-s1">
-                          <img
-                            src="./static/section1img.png"
-                            className="s1-image"
-                          ></img>
+                        <Grid container lg={12} className="g-row-start1">
+                          <Grid container xs={5} className="g-row-cell">
+                            <Grid item xs={12} className="g-row-cell-s1">
+                              <img
+                                src="./static/homeimg1.png"
+                                className="s1-image"
+                              ></img>
+                            </Grid>
+                          </Grid>
+                          <Grid container xs={7} className="g-row-cell">
+                            <Grid container xs={12} className="s1-p1-move">
+                              <Grid item xs={12} className="">
+                                <h1>
+                                  Politically Stable,<br></br>
+                                  Business Friendly
+                                </h1>
+                              </Grid>
+                              <Grid item xs={12} className="">
+                                <h2 className="headline-text">
+                                  <div className="blue-square">1</div>
+                                  <span className="adjust-left">
+                                    Consectetur Adipiscing
+                                  </span>
+                                </h2>
+                              </Grid>
+                              <Grid item xs={12} className="">
+                                <h2 className="headline-text">
+                                  <div className="blue-square">2</div>
+                                  <span className="adjust-left">
+                                    Consectetur Adipiscing
+                                  </span>
+                                </h2>
+                              </Grid>
+                              <Grid item xs={12} className="">
+                                <h2 className="headline-text">
+                                  <div className="blue-square">3</div>
+                                  <span className="adjust-left">
+                                    Consectetur Adipiscing
+                                  </span>
+                                </h2>
+                              </Grid>
+                            </Grid>
+                          </Grid>
                         </Grid>
-                        </Slide>
-                      )}
-                      {banner == "plan" && (
-                        <Slide
-                          direction="left"
-                          in={true}
-                          timeout={750}
-                          mountOnEnter
-                          unmountOnExit
-                        >
-                          <Grid item xs={7} className="g-row-cell-s1">
-                            <button onClick={handleBack}>Back</button>
-                            <img
-                              src="./static/section1img1.png"
-                              className="s1-image"
-                            ></img>
+                      </Slide>
+                    )}
+                    {banner == "plan" && (
+                      <Slide
+                        direction="left"
+                        in={true}
+                        appear={start}
+                        timeout={750}
+                        mountOnEnter
+                        unmountOnExit
+                      >
+                        <Grid container lg={12} className="g-row-start1">
+                          <Grid container xs={5} className="g-row-cell">
+                            <Grid item xs={12} className="g-row-cell-s1">
+                              <img
+                                src="./static/homeimg2.png"
+                                className="s1-image"
+                              ></img>
+                            </Grid>
                           </Grid>
-                        </Slide>
-                      )}
-                      {banner == "find" && (
-                        <Slide
-                          direction="left"
-                          in={true}
-                          timeout={750}
-                          mountOnEnter
-                          unmountOnExit
-                        >
-                          <Grid item xs={7} className="g-row-cell-s1">
-                            <button onClick={handleBack}>Back</button>
-                            <img
-                              src="./static/section1img2.png"
-                              className="s1-image"
-                            ></img>
+
+                          <Grid container xs={7} className="g-row-cell">
+                            <Grid container xs={12} className="s1-p1-move">
+                              <Grid item xs={12} className="">
+                                <h1>
+                                  Politically Stable,<br></br>
+                                  Business Friendly
+                                </h1>
+                              </Grid>
+                              <Grid item xs={12} className="">
+                                <h2 className="headline-text">
+                                  <div className="blue-square">1</div>
+                                  <span className="adjust-left">
+                                    Consectetur Adipiscing
+                                  </span>
+                                </h2>
+                              </Grid>
+                              <Grid item xs={12} className="">
+                                <h2 className="headline-text">
+                                  <div className="blue-square">2</div>
+                                  <span className="adjust-left">
+                                    Consectetur Adipiscing
+                                  </span>
+                                </h2>
+                              </Grid>
+                              <Grid item xs={12} className="">
+                                <h2 className="headline-text">
+                                  <div className="blue-square">3</div>
+                                  <span className="adjust-left">
+                                    Consectetur Adipiscing
+                                  </span>
+                                </h2>
+                              </Grid>
+                            </Grid>
                           </Grid>
-                        </Slide>
-                      )}
-                      {banner == "make" && (
-                        <Slide
-                          direction="left"
-                          in={true}
-                          timeout={750}
-                          mountOnEnter
-                          unmountOnExit
-                        >
-                          <Grid item xs={7} className="g-row-cell-s1">
-                            <button onClick={handleBack}>Back</button>
-                            <img
-                              src="./static/section1img3.png"
-                              className="s1-image"
-                            ></img>
+                        </Grid>
+                      </Slide>
+                    )}
+                    {banner == "find" && (
+                      <Slide
+                        direction="left"
+                        in={true}
+                        appear={start}
+                        timeout={750}
+                        mountOnEnter
+                        unmountOnExit
+                      >
+                        <Grid container lg={12} className="g-row-start1">
+                          <Grid container xs={5} className="g-row-cell">
+                            <Grid item xs={12} className="g-row-cell-s1">
+                              <img
+                                src="./static/homeimg3.png"
+                                className="s1-image"
+                              ></img>
+                            </Grid>
                           </Grid>
-                        </Slide>
-                      )}
-                      {banner == "ship" && (
-                        <Slide
-                          direction="left"
-                          in={true}
-                          timeout={750}
-                          mountOnEnter
-                          unmountOnExit
-                        >
-                          <Grid item xs={7} className="g-row-cell-s1">
-                            <button onClick={handleBack}>Back</button>
-                            <img
-                              src="./static/section1img4.png"
-                              className="s1-image"
-                            ></img>
+
+                          <Grid container xs={7} className="g-row-cell">
+                            <Grid container xs={12} className="s1-p1-move">
+                              <Grid item xs={12} className="">
+                                <h1>
+                                  Politically Stable,<br></br>
+                                  Business Friendly
+                                </h1>
+                              </Grid>
+                              <Grid item xs={12} className="">
+                                <h2 className="headline-text">
+                                  <div className="blue-square">1</div>
+                                  <span className="adjust-left">
+                                    Consectetur Adipiscing
+                                  </span>
+                                </h2>
+                              </Grid>
+                              <Grid item xs={12} className="">
+                                <h2 className="headline-text">
+                                  <div className="blue-square">2</div>
+                                  <span className="adjust-left">
+                                    Consectetur Adipiscing
+                                  </span>
+                                </h2>
+                              </Grid>
+                              <Grid item xs={12} className="">
+                                <h2 className="headline-text">
+                                  <div className="blue-square">3</div>
+                                  <span className="adjust-left">
+                                    Consectetur Adipiscing
+                                  </span>
+                                </h2>
+                              </Grid>
+                            </Grid>
                           </Grid>
-                        </Slide>
-                      )}
-                    </Grid>
+                        </Grid>
+                      </Slide>
+                    )}
+                    {banner == "make" && (
+                      <Slide
+                        direction="left"
+                        in={true}
+                        appear={start}
+                        timeout={750}
+                        mountOnEnter
+                        unmountOnExit
+                      >
+                        <Grid container lg={12} className="g-row-start1">
+                          <Grid container xs={5} className="g-row-cell">
+                            <Grid item xs={12} className="g-row-cell-s1">
+                              <img
+                                src="./static/homeimg4.png"
+                                className="s1-image"
+                              ></img>
+                            </Grid>
+                          </Grid>
+
+                          <Grid container xs={7} className="g-row-cell">
+                            <Grid container xs={12} className="s1-p1-move">
+                              <Grid item xs={12} className="">
+                                <h1>
+                                  Politically Stable,<br></br>
+                                  Business Friendly
+                                </h1>
+                              </Grid>
+                              <Grid item xs={12} className="">
+                                <h2 className="headline-text">
+                                  <div className="blue-square">1</div>
+                                  <span className="adjust-left">
+                                    Consectetur Adipiscing
+                                  </span>
+                                </h2>
+                              </Grid>
+                              <Grid item xs={12} className="">
+                                <h2 className="headline-text">
+                                  <div className="blue-square">2</div>
+                                  <span className="adjust-left">
+                                    Consectetur Adipiscing
+                                  </span>
+                                </h2>
+                              </Grid>
+                              <Grid item xs={12} className="">
+                                <h2 className="headline-text">
+                                  <div className="blue-square">3</div>
+                                  <span className="adjust-left">
+                                    Consectetur Adipiscing
+                                  </span>
+                                </h2>
+                              </Grid>
+                            </Grid>
+                          </Grid>
+                        </Grid>
+                      </Slide>
+                    )}
+                    {banner == "ship" && (
+                      <Slide
+                        direction="left"
+                        in={true}
+                        appear={start}
+                        timeout={750}
+                        mountOnEnter
+                        unmountOnExit
+                      >
+                        <Grid container lg={12} className="g-row-start1">
+                          <Grid container xs={5} className="g-row-cell">
+                            <Grid item xs={12} className="g-row-cell-s1">
+                              <img
+                                src="./static/homeimg5.png"
+                                className="s1-image"
+                              ></img>
+                            </Grid>
+                          </Grid>
+
+                          <Grid container xs={7} className="g-row-cell">
+                            <Grid container xs={12} className="s1-p1-move">
+                              <Grid item xs={12} className="">
+                                <h1>
+                                  Politically Stable,<br></br>
+                                  Business Friendly
+                                </h1>
+                              </Grid>
+                              <Grid item xs={12} className="">
+                                <h2 className="headline-text">
+                                  <div className="blue-square">1</div>
+                                  <span className="adjust-left">
+                                    Consectetur Adipiscing
+                                  </span>
+                                </h2>
+                              </Grid>
+                              <Grid item xs={12} className="">
+                                <h2 className="headline-text">
+                                  <div className="blue-square">2</div>
+                                  <span className="adjust-left">
+                                    Consectetur Adipiscing
+                                  </span>
+                                </h2>
+                              </Grid>
+                              <Grid item xs={12} className="">
+                                <h2 className="headline-text">
+                                  <div className="blue-square">3</div>
+                                  <span className="adjust-left">
+                                    Consectetur Adipiscing
+                                  </span>
+                                </h2>
+                              </Grid>
+                            </Grid>
+                          </Grid>
+                        </Grid>
+                      </Slide>
+                    )}
+
+                    {/*
+                          <Button variant="contained" className="p1-button">
+                            Lorem Ipsum {"\u00A0"}
+                            <AddCircleOutlineIcon />
+                          </Button>
+                          */}
                     <Grid container className="g-row-start2">
                       {/* <h1>Click to learn more</h1> */}
                       <Grid
@@ -207,10 +418,34 @@ const IndexPage = ({ data, location, width }) => {
                         xs={12}
                         className="g-row-cell-s2 infographics"
                       >
-                        <CardGraphic svg="check" h1text="Plan" h2text="Product Planning + Validation" hasColor={plan} handleChange={handlePlan}/>
-                        <CardGraphic svg="building" h1text="Find" h2text="Sourcing + Samples" hasColor={find} handleChange={handleFind}/>
-                        <CardGraphic svg="world" h1text="Make" h2text="Inspection + Production" hasColor={make} handleChange={handleMake}/>
-                        <CardGraphic svg="clipboard" h1text="Ship" h2text="Shipping + Prep Guidance" hasColor={ship} handleChange={handleShip}/>
+                        <CardGraphic
+                          svg="check"
+                          h1text="Plan"
+                          h2text="Product Planning + Validation"
+                          hasColor={plan}
+                          handleChange={handlePlan}
+                        />
+                        <CardGraphic
+                          svg="building"
+                          h1text="Find"
+                          h2text="Sourcing + Samples"
+                          hasColor={find}
+                          handleChange={handleFind}
+                        />
+                        <CardGraphic
+                          svg="world"
+                          h1text="Make"
+                          h2text="Inspection + Production"
+                          hasColor={make}
+                          handleChange={handleMake}
+                        />
+                        <CardGraphic
+                          svg="clipboard"
+                          h1text="Ship"
+                          h2text="Shipping + Prep Guidance"
+                          hasColor={ship}
+                          handleChange={handleShip}
+                        />
                       </Grid>
                     </Grid>
                   </Hidden>
@@ -372,13 +607,12 @@ const IndexPage = ({ data, location, width }) => {
                 </section>
               </div>
               <div className="section fsection fp-auto-height">
-                <section className="section-p2">
-                <Contact />
+                <section className="">
+                  <Contact />
+                  <Footer fullpageApi={fullpageApi} />
                 </section>
               </div>
-              <div className="section fp-auto-height">
-                <Footer fullpageApi={fullpageApi} />
-              </div>
+              
             </ReactFullpage.Wrapper>
           );
         }}

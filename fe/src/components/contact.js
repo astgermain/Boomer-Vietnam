@@ -8,6 +8,10 @@ const LAMBDA_URL =
 const required = "This field is required";
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [value, setValue] = React.useState("Name");
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
   const methods = useForm();
   const {
     register,
@@ -54,14 +58,29 @@ const Contact = () => {
     <form onSubmit={handleSubmit(onSubmit)} method="post">
       <label htmlFor="name">
         <h5>Name</h5>
+
+        
+        <TextField
+          inputRef={register({ required })}
+          id="name"
+          type="text"
+          name="name"
+          label="Name"
+          rowsMax={1}
+          variant="outlined"
+          disabled={isSubmitting}
+        />
+        
+        {/*
         <input
           type="text"
           name="name"
           id="name"
-          placeholder="Your name"
+          placeholder="Name"
           ref={register({ required })}
           disabled={isSubmitting}
         />
+        */}
       </label>
 
       <label htmlFor="email">
@@ -70,7 +89,7 @@ const Contact = () => {
           type="email"
           name="email"
           id="email"
-          placeholder="your@email.address"
+          placeholder="E-Mail Address"
           ref={register({ required })}
           disabled={isSubmitting}
         />
@@ -83,7 +102,7 @@ const Contact = () => {
           name="question"
           id="question"
           rows="3"
-          placeholder="Your message"
+          placeholder="Message"
           disabled={isSubmitting}
         />
       </label>
@@ -107,7 +126,7 @@ const Contact = () => {
         )}
         {errors.email && (
           <Alert onClose={() => {}} variant="outlined" severity="warning">
-            E-Mail is required! 
+            E-Mail is required!
           </Alert>
         )}
         {errors.question && (
