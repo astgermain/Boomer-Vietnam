@@ -39,6 +39,7 @@ const Layout = ({ location, children }) => {
   return (
     <ThemeProvider theme={theme}>
     <main className="main">
+      <div className="margin-div">
       <Helmet>
         <link
           rel="stylesheet"
@@ -54,7 +55,7 @@ const Layout = ({ location, children }) => {
       
         
         {content}
-        
+        </div>
     </main>
     </ThemeProvider>
   );
