@@ -42,7 +42,7 @@ const IndexPage = ({ data, location, width }) => {
     if (banner == "plan") {
       setBanner(`default`);
       setPlan(false);
-      setStart(false);
+      setStart(true);
     } else {
       setBanner(`plan`);
       setPlan(true);
@@ -56,7 +56,7 @@ const IndexPage = ({ data, location, width }) => {
     if (banner == "find") {
       setBanner(`default`);
       setFind(false);
-      setStart(false);
+      setStart(true);
     } else {
     setBanner(`find`);
     setPlan(false);
@@ -70,7 +70,7 @@ const IndexPage = ({ data, location, width }) => {
     if (banner == "make") {
       setBanner(`default`);
       setMake(false);
-      setStart(false);
+      setStart(true);
     } else {
     setBanner(`make`);
     setPlan(false);
@@ -84,7 +84,7 @@ const IndexPage = ({ data, location, width }) => {
     if (banner == "ship") {
       setBanner(`default`);
       setShip(false);
-      setStart(false);
+      setStart(true);
     } else {
     setBanner(`ship`);
     setPlan(false);
