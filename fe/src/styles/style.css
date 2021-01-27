@@ -65,6 +65,9 @@ body {
   background-image: url("/static/BoomerVietnamPattern.png");
   background-size: contain;
 }
+.fullpage-wrapper {
+  background: white;
+}
 .margin-div {
   margin: 0 12.5vw;
 }
@@ -220,7 +223,11 @@ body {
 }
 
 .infographics {
-  justify-content: space-between !important;
+  justify-content: center !important;
+}
+
+.card-spacing {
+  margin: 0 1vw;
 }
 
 .header-links {

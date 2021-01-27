@@ -423,6 +423,7 @@ const IndexPage = ({ data, location, width }) => {
                           h2text="Product Planning + Validation"
                           hasColor={plan}
                           handleChange={handlePlan}
+                          className="card-spacing"
                         />
                         <CardGraphic
                           svg="building"
@@ -430,6 +431,7 @@ const IndexPage = ({ data, location, width }) => {
                           h2text="Sourcing + Samples"
                           hasColor={find}
                           handleChange={handleFind}
+                          className="card-spacing"
                         />
                         <CardGraphic
                           svg="world"
@@ -437,6 +439,7 @@ const IndexPage = ({ data, location, width }) => {
                           h2text="Inspection + Production"
                           hasColor={make}
                           handleChange={handleMake}
+                          className="card-spacing"
                         />
                         <CardGraphic
                           svg="clipboard"
@@ -444,6 +447,7 @@ const IndexPage = ({ data, location, width }) => {
                           h2text="Shipping + Prep Guidance"
                           hasColor={ship}
                           handleChange={handleShip}
+                          className="card-spacing"
                         />
                       </Grid>
                     </Grid>
