@@ -108,6 +108,23 @@
 
 .card-button {
     padding: 0 !important;
-    margin: 0 1vw !important;
+    margin: 0 .5vw !important;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+    transform: scale(1);
+    animation: pulse-black 3s infinite;
+}
+
+@keyframes pulse-black {
+	0% {
+		box-shadow: 0 0 0 0 rgb(1 162 198);
+    }
+	
+	70% {
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+	
+	100% {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
 }
 

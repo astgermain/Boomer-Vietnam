@@ -433,7 +433,7 @@ const IndexPage = ({ data, location, width }) => {
                         />
                         <CardGraphic
                           svg="world"
-                          h1text="Make"
+                          h1text="Product Manufacturing"
                           h2text="Inspection + Production"
                           hasColor={make}
                           handleChange={handleMake}
