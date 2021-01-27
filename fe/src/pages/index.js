@@ -557,24 +557,10 @@ const IndexPage = ({ data, location, width }) => {
                           className="g-row-cell-boxes2 boxes"
                         >
                           <Grid className="box-container" container lg={12}>
-                            <Paper className="box">
-                              <CardGraphic svg="check" isBox={true} />
-                            </Paper>
-                          </Grid>
-                          <Grid className="box-container" container lg={12}>
-                            <Paper className="box">
-                              <CardGraphic svg="building" hasColor2={true} />
-                            </Paper>
-                          </Grid>
-                          <Grid className="box-container" container lg={12}>
-                            <Paper className="box">
-                              <CardGraphic svg="world" isBox={true} />
-                            </Paper>
-                          </Grid>
-                          <Grid className="box-container" container lg={12}>
-                            <Paper className="box">
-                              <CardGraphic svg="clipboard" isBox={true} />
-                            </Paper>
+                            <Grid item xs={12}><h1>Icon</h1></Grid>
+                            <Grid item xs={12}><h1>Line</h1></Grid>
+                            <Grid item xs={12}><h1>HEADER</h1></Grid>
+                            <Grid item xs={12}><h1>Content</h1></Grid>
                           </Grid>
                         </Grid>
                       </Grid>
