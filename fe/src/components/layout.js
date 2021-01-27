@@ -41,6 +41,7 @@ const Layout = ({ location, children }) => {
     <main className="main">
       <div className="margin-div">
       <Helmet>
+      <title>Boomer Vietnam</title>
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
