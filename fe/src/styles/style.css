@@ -283,6 +283,10 @@ body {
   align-items: center;
 }
 
+.card-spacing {
+  margin: 0 1vw;
+}
+
 .adjust-left {
   margin-left: 10px;
 }
