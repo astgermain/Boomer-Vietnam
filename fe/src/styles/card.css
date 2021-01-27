@@ -116,7 +116,7 @@
 
 @keyframes pulse-black {
 	0% {
-		box-shadow: 0 0 0 0 rgb(1 162 198);
+		box-shadow: 0 0 0 0 rgb(0, 0, 0, 0);
     }
 	
 	70% {
@@ -124,7 +124,7 @@
 	}
 	
 	100% {
-		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+		box-shadow: 0 0 0 0 rgb(1 162 198);
 	}
 }
 
