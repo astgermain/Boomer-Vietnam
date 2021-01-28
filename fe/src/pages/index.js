@@ -58,12 +58,12 @@ const IndexPage = ({ data, location, width }) => {
       setFind(false);
       setStart(true);
     } else {
-    setBanner(`find`);
-    setPlan(false);
-    setFind(true);
-    setMake(false);
-    setShip(false);
-    setStart(true);
+      setBanner(`find`);
+      setPlan(false);
+      setFind(true);
+      setMake(false);
+      setShip(false);
+      setStart(true);
     }
   };
   let handleMake = () => {
@@ -72,12 +72,12 @@ const IndexPage = ({ data, location, width }) => {
       setMake(false);
       setStart(true);
     } else {
-    setBanner(`make`);
-    setPlan(false);
-    setFind(false);
-    setMake(true);
-    setShip(false);
-    setStart(true);
+      setBanner(`make`);
+      setPlan(false);
+      setFind(false);
+      setMake(true);
+      setShip(false);
+      setStart(true);
     }
   };
   let handleShip = () => {
@@ -86,12 +86,12 @@ const IndexPage = ({ data, location, width }) => {
       setShip(false);
       setStart(true);
     } else {
-    setBanner(`ship`);
-    setPlan(false);
-    setFind(false);
-    setMake(false);
-    setShip(true);
-    setStart(true);
+      setBanner(`ship`);
+      setPlan(false);
+      setFind(false);
+      setMake(false);
+      setShip(true);
+      setStart(true);
     }
   };
   return (
@@ -144,18 +144,31 @@ const IndexPage = ({ data, location, width }) => {
                           </Grid>
                           <Grid container xs={7} className="g-row-cell">
                             <Grid container xs={12} className="s1-p1-move">
-                              <Grid item sm={11} md={10} lg={8} className="s1-p1-item">
+                              <Grid
+                                item
+                                sm={11}
+                                md={10}
+                                lg={8}
+                                className="s1-p1-item"
+                              >
                                 <h1>
                                   Welcome To<br></br>
                                   Boomer Vietnam
                                 </h1>
                                 <h2 className="headline-text">
                                   <span className="headline-text-2">
-                                  Boomer Vietnam is your partner for any products or services you want from Vietnam. Our large team in Vietnam boasts a staff of manufacturing, technology, packaging, quality inspection, and logistics experts that are Vietnamese locals. We also have a U.S based headquarters to handle all of the details with a working relationship with Vietnam.
+                                    Boomer Vietnam is your partner for any
+                                    products or services you want from Vietnam.
+                                    Our large team in Vietnam boasts a staff of
+                                    manufacturing, technology, packaging,
+                                    quality inspection, and logistics experts
+                                    that are Vietnamese locals. We also have a
+                                    U.S based headquarters to handle all of the
+                                    details with a working relationship with
+                                    Vietnam.
                                   </span>
                                 </h2>
                               </Grid>
-                              
                             </Grid>
                           </Grid>
                         </Grid>
@@ -192,7 +205,8 @@ const IndexPage = ({ data, location, width }) => {
                                 <h2 className="headline-text">
                                   <div className="blue-square">1</div>
                                   <span className="adjust-left">
-                                  Manufacturers follow international standards and have proper certifications
+                                    Manufacturers follow international standards
+                                    and have proper certifications
                                   </span>
                                 </h2>
                               </Grid>
@@ -200,8 +214,8 @@ const IndexPage = ({ data, location, width }) => {
                                 <h2 className="headline-text">
                                   <div className="blue-square">2</div>
                                   <span className="adjust-left">
-                                  Made in Vietnam label is more appealing in certain markets
-
+                                    Made in Vietnam label is more appealing in
+                                    certain markets
                                   </span>
                                 </h2>
                               </Grid>
@@ -209,7 +223,9 @@ const IndexPage = ({ data, location, width }) => {
                                 <h2 className="headline-text">
                                   <div className="blue-square">3</div>
                                   <span className="adjust-left">
-                                  Home to top technology experts in website development, coding, and software engineering
+                                    Home to top technology experts in website
+                                    development, coding, and software
+                                    engineering
                                   </span>
                                 </h2>
                               </Grid>
@@ -540,10 +556,55 @@ const IndexPage = ({ data, location, width }) => {
                           className="g-row-cell-boxes2 boxes"
                         >
                           <Grid className="box-container" container lg={12}>
-                            <Grid item xs={12}><h1>Icon</h1></Grid>
-                            <Grid item xs={12}><h1>Line</h1></Grid>
-                            <Grid item xs={12}><h1>HEADER</h1></Grid>
-                            <Grid item xs={12}><h1>Content</h1></Grid>
+                            <Grid item xs={12}>
+                              <h1>
+                                Boomer Vietnam is your partner for any products
+                                or services you want from Vietnam. Our large
+                                team in Vietnam boasts a staff of manufacturing,
+                                technology, packaging, quality inspection, and
+                                logistics experts that are Vietnamese locals. We
+                                also have a U.S based headquarters to handle all
+                                of the details with a working relationship with
+                                Vietnam.
+                                <Grid item xs={12}>
+                                  <h1>
+                                    Boomer Vietnam partners with the top
+                                    manufacturing, technology, packaging,
+                                    inspection, and logistic companies in
+                                    Vietnam and has manufactured and sold over
+                                    $50 million worth of products from Vietnam
+                                    in the last nine months.
+                                  </h1>
+                                </Grid>
+                                <Grid item xs={12}>
+                                  <h1>
+                                    With fast communication and turn- around
+                                    time, we can get your samples and price
+                                    quotes in as little as three weeks. If you
+                                    decide to select Boomer Vietnam as your
+                                    partner, our production and delivery times
+                                    are much faster than the industry standard.
+                                    Let us prove to you that we can help your
+                                    business thrive through Vietnam sourcing.
+                                  </h1>
+                                </Grid>
+                                <Grid item xs={12}>
+                                  <h1>
+                                    As one of the largest and fastest-growing
+                                    economies in the Asia manufacturing hub,
+                                    Vietnam has become the go-to country for a
+                                    variety of product and service categories in
+                                    recent years. Vietnamese exports to the
+                                    United States alone are increasing at over
+                                    20-30% per year. Many large international
+                                    brands have moved some or all their
+                                    manufacturing from China to Vietnam
+                                    including big names like Samsung®, Nike®,
+                                    Apple®, and Adidas®.
+                                  </h1>
+                                </Grid>
+                              </h1>
+                            </Grid>
                           </Grid>
                         </Grid>
                       </Grid>
