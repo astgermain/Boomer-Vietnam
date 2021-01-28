@@ -39,8 +39,7 @@
 
 .box-image {
     width: auto;
-    height: calc(40vh + 110px);
-    max-width: 400px;
+    max-width: 300px;
 }
 
 
