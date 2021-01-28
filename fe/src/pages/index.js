@@ -109,7 +109,7 @@ const IndexPage = ({ data, location, width }) => {
         pluginWrapper={pluginWrapper}
         //fullpage options
         licenseKey={"8734D589-74E74CC7-AA2B9E45-33B07FC5"}
-        scrollingSpeed={750} /* Options here */
+        scrollingSpeed={1000} /* Options here */
         menu="#header"
         anchors={['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage']}
         render={({ state, fullpageApi }) => {

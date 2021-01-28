@@ -1,13 +1,12 @@
 import * as React from "react";
-import "../styles/svg.css"
+import "../styles/svg.css";
 export default function SVG({ name, color }) {
   //check, world, clipboard, building
   let r = "";
   if (color == "white") {
-    r = "svgWhite"
-  }
-  else{
-    r = "svgBlack"
+    r = "svgWhite";
+  } else {
+    r = "svgBlack";
   }
   const svg = {
     check: (
@@ -22,35 +21,50 @@ export default function SVG({ name, color }) {
           className={r}
         >
           <defs></defs>
-          <polyline
+          <path
             className="cls-1"
-            points="109.74 236.05 197.63 170.26 240.79 215 384.8 112.92"
+            d="M109.74,241.05a5,5,0,0,1-3-9l87.9-65.79a5,5,0,0,1,6.59.53l40.17,41.65,140.51-99.6A5,5,0,0,1,387.7,117l-144,102.08a5,5,0,0,1-6.49-.61L197.1,176.91l-84.36,63.15A5,5,0,0,1,109.74,241.05Z"
           />
-          <polyline
+          <path
             className="cls-1"
-            points="356.17 110.63 384.8 112.9 382.31 144.29"
+            d="M382.32,149.29l-.41,0a5,5,0,0,1-4.58-5.38l2.09-26.4-23.64-1.88a5,5,0,0,1,.79-10l28.63,2.28a5,5,0,0,1,4.59,5.38l-2.5,31.38A5,5,0,0,1,382.32,149.29Z"
           />
-          <line className="cls-1" x1="89" y1="392.72" x2="411" y2="392.72" />
+          <path
+            className="cls-1"
+            d="M411,397.72H89a5,5,0,0,1,0-10H411a5,5,0,0,1,0,10Z"
+          />
           <rect
-            className="cls-2"
+            className="cls-1"
             x="326.41"
             y="207.16"
             width="63.31"
             height="185.56"
           />
+          <path
+            className="cls-1"
+            d="M389.71,397.72h-63.3a5,5,0,0,1-5-5V207.16a5,5,0,0,1,5-5h63.3a5,5,0,0,1,5,5V392.72A5,5,0,0,1,389.71,397.72Zm-58.3-10h53.3V212.16h-53.3Z"
+          />
           <rect
-            className="cls-2"
+            className="cls-1"
             x="217.8"
             y="281.93"
             width="63.85"
             height="110.24"
           />
+          <path
+            className="cls-1"
+            d="M281.65,397.17H217.8a5,5,0,0,1-5-5V281.93a5,5,0,0,1,5-5h63.85a5,5,0,0,1,5,5V392.17A5,5,0,0,1,281.65,397.17Zm-58.85-10h53.85V286.93H222.8Z"
+          />
           <rect
-            className="cls-2"
+            className="cls-1"
             x="109.74"
             y="327.23"
             width="63.85"
             height="65.49"
+          />
+          <path
+            className="cls-1"
+            d="M173.59,397.72H109.74a5,5,0,0,1-5-5V327.23a5,5,0,0,1,5-5h63.85a5,5,0,0,1,5,5v65.49A5,5,0,0,1,173.59,397.72Zm-58.85-10h53.85V332.23H114.74Z"
           />
         </svg>
       </>
@@ -95,9 +109,27 @@ export default function SVG({ name, color }) {
             className="cls-1"
             d="M242.8,349.55S250.68,358,271.55,367c20.38,8.8,22.35-14.58,22.35-14.58,16.13,16.14,34.55-6,31-18.42,10.76,9.42,33.21-7.82,28-23.37,17.48,9.51,37.55-9.63,22.44-27.19"
           />
-          <line className="cls-1" x1="257.17" y1="314.28" x2="293.9" y2="352.45" />
-          <line className="cls-1" x1="324.93" y1="334.03" x2="278.69" y2="285.83" />
-          <line className="cls-1" x1="352.97" y1="310.66" x2="302.9" y2="263.59" />
+          <line
+            className="cls-1"
+            x1="257.17"
+            y1="314.28"
+            x2="293.9"
+            y2="352.45"
+          />
+          <line
+            className="cls-1"
+            x1="324.93"
+            y1="334.03"
+            x2="278.69"
+            y2="285.83"
+          />
+          <line
+            className="cls-1"
+            x1="352.97"
+            y1="310.66"
+            x2="302.9"
+            y2="263.59"
+          />
         </svg>
       </>
     ),
