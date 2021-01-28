@@ -258,7 +258,7 @@ body {
   justify-content: center;
   align-self: center;
   max-height: calc(0.45 * (100vh - 125px));
-  max-width: calc(0.41 * (100vw - 12.5vw));
+  max-width: 100%;
 }
 
 .s1-p1-move {
