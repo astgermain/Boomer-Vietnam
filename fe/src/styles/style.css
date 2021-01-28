@@ -249,6 +249,10 @@ body {
   font-size: 38px !important;
 }
 
+.story-text {
+  font-size: 24px;
+}
+
 .g-row-header {
   display: flex;
   align-items: flex-end;

@@ -559,7 +559,7 @@ const IndexPage = ({ data, location, width }) => {
                         >
                           <Grid className="box-container" container lg={12}>
                             <Grid item xs={12}>
-                              <h1 className="align-left">Our Story</h1>
+                              <h1 className="align-left story-text">Our Story</h1>
                             </Grid>
                             <div className="divider"></div>
                             <Grid item xs={12}>
