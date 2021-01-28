@@ -87,7 +87,22 @@ body {
 .about-container {
   justify-content: center;
 }
-
+@media only screen and (max-height: 650px) and (min-width: 961) {
+  .g-row-start1 {
+    height: calc(100vh - 125px) !important;
+  }
+  .g-row-start2 {
+    display: none !important;
+  }
+}
+@media only screen and (max-height: 650px) and (max-width: 960) {
+  .g-row-start1 {
+    height: calc(100vh - 100px) !important;
+  }
+  .g-row-start2 {
+    display: none !important;
+  }
+}
 @media only screen and (max-width: 960px) {
   .box-container {
     justify-content: center !important;
