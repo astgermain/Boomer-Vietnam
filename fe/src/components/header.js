@@ -125,7 +125,7 @@ const Header = ({fullpageApi}) => {
             alignContent="center"
             xs={5}
           >
-            <Link href="#" onClick={moveTo1}>
+            <Link href="#firstPage">
               <img src={Logo} alt="Logo" />
             </Link>
           </Grid>

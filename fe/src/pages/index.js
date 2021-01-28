@@ -30,6 +30,9 @@ const IndexPage = ({ data, location, width }) => {
   const [plan, setPlan] = useState(false);
   const [make, setMake] = useState(false);
   const [ship, setShip] = useState(false);
+  const [p1, setP1] = useState(false);
+  const [p2, setP2] = useState(false);
+  const [p3, setP3] = useState(false);
   const [start, setStart] = useState(false);
   let handleBack = () => {
     setBanner(`default`);
@@ -94,6 +97,21 @@ const IndexPage = ({ data, location, width }) => {
       setStart(true);
     }
   };
+  let handleP1 = () => {
+    setP1(true);
+    setP2(false);
+    setP3(false);
+  };
+  let handleP2 = () => {
+    setP2(true);
+    setP1(false);
+    setP3(false);
+  };
+  let handleP3 = () => {
+    setP3(true);
+    setP2(false);
+    setP1(false);
+  };
 
   return (
     <>
@@ -111,9 +129,14 @@ const IndexPage = ({ data, location, width }) => {
         licenseKey={"8734D589-74E74CC7-AA2B9E45-33B07FC5"}
         scrollingSpeed={1000} /* Options here */
         menu="#header"
-        anchors={['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage']}
+        anchors={[
+          "firstPage",
+          "secondPage",
+          "thirdPage",
+          "fourthPage",
+          "lastPage",
+        ]}
         render={({ state, fullpageApi }) => {
-
           return (
             <>
               <ReactFullpage.Wrapper>
@@ -506,25 +529,37 @@ const IndexPage = ({ data, location, width }) => {
                             >
                               <Grid className="box-container" item lg={12}>
                                 <Paper className="box">
-                                  <CardGraphic svg="check" isBox={true} />
-                                </Paper>
-                              </Grid>
-                              <Grid className="box-container" item lg={12}>
-                                <Paper className="box">
                                   <CardGraphic
-                                    svg="building"
-                                    hasColor2={true}
+                                    svg="p1"
+                                    hasColor2={p1}
+                                    h1text={"U.S. Based Headquarters"}
+                                    vert={true}
+                                    handleChange={handleP1}
                                   />
                                 </Paper>
                               </Grid>
                               <Grid className="box-container" item lg={12}>
                                 <Paper className="box">
-                                  <CardGraphic svg="world" isBox={true} />
+                                  <CardGraphic
+                                    svg="p2"
+                                    isBox={true}
+                                    hasColor2={p2}
+                                    h1text={"Fast Turnaround Time"}
+                                    vert={true}
+                                    handleChange={handleP2}
+                                  />
                                 </Paper>
                               </Grid>
                               <Grid className="box-container" item lg={12}>
                                 <Paper className="box">
-                                  <CardGraphic svg="clipboard" isBox={true} />
+                                  <CardGraphic
+                                    svg="p3"
+                                    isBox={true}
+                                    hasColor2={p3}
+                                    h1text={"Top Manufacturing Practices"}
+                                    vert={true}
+                                    handleChange={handleP3}
+                                  />
                                 </Paper>
                               </Grid>
                             </Grid>

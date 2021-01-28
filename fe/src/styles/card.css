@@ -92,6 +92,7 @@
   font-weight: 600 !important;
   text-align: center !important;
   font-size: 0.85rem !important;
+  width: 100%;
 }
 .second-card-text {
   color: white !important;
@@ -111,6 +112,20 @@
 .colorText2 {
   color: black !important;
 }
+.color-text3 {
+  color: white !important;
+  text-align: left !important;
+  padding-left: 15px !important;
+  align-self: center;
+  margin-bottom: 0 !important;
+}
+.white-text {
+  color: black !important;
+  text-align: left !important;
+  padding-left: 15px !important;
+  align-self: center;
+  margin-bottom: 0 !important;
+}
 
 .card-action {
   padding: 0 !important;
@@ -118,6 +133,7 @@
 
 .card-flex {
   align-self: flex-start;
+  display: flex;
 }
 
 .card-flex2 {

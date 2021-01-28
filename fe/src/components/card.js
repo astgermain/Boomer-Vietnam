@@ -43,67 +43,95 @@ export default function CardGraphic({
   handleChange,
   h1text,
   h2text,
+  vert,
 }) {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
   let g = classes.root;
   let h, i, j, k, svgColor;
-  if (hasColor) {
+  if (vert && hasColor2) {
+    k = `color-text3`;
+    g = `hasColorBox box`;
+    h = `card-content2`;
+    i = `top-content2`;
+    j = `bottom-content2`;
+    svgColor = "white";
+  } else if (vert) {
+    k = `white-text`;
+    g = `box`;
+    h = `card-content2`;
+    i = `top-content2`;
+    j = `bottom-content2 colorText2`;
+  } else if (hasColor) {
     g = `hasColor`;
     h = `card-content`;
     i = `top-content`;
     j = `bottom-content`;
-    svgColor = "white"
+    svgColor = "white";
   } else if (hasColor2) {
     g = `hasColorBox box`;
     h = `card-content2`;
     i = `top-content2`;
     j = `bottom-content2`;
-    svgColor = "white"
+    svgColor = "white";
   } else if (isBox) {
     g = `box`;
     h = `card-content2`;
     i = `top-content2`;
     j = `bottom-content2`;
     k = `colorText`;
-    j = `colorText2`
-    svgColor = "white"
+    j = `colorText2`;
+    svgColor = "white";
   } else {
     h = `card-content`;
     i = `top-content`;
     j = `bottom-content`;
     k = `colorText`;
-    j = `colorText2`
+    j = `colorText2`;
   }
   return (
     <Button size="small" onClick={handleChange} className="card-button">
       <Card className={g} variant="outlined">
         <CardContent className={h}>
-          
           <div className={j}>
-            <Grid item xs={12}>
+            {vert ? (
               <Grid item xs={12}>
-                <SVG name={svg} color={svgColor}/>
+                <Grid item xs={12} className="card-flex">
+                  <SVG name={svg} color={svgColor} />
+                  <Typography
+                    className={`${classes.title} first-card-text ${k}`}
+                    color="textSecondary"
+                    gutterBottom
+                  >
+                    {h1text}
+                  </Typography>
+                </Grid>
               </Grid>
-              <Grid item xs={12} className="card-flex">
-                <Typography
-                  className={`${classes.title} first-card-text ${k}`}
-                  color="textSecondary"
-                  gutterBottom
-                >
-                  {h1text}
-                </Typography>
+            ) : (
+              <Grid item xs={12}>
+                <Grid item xs={12}>
+                  <SVG name={svg} color={svgColor} />
+                </Grid>
+                <Grid item xs={12} className="card-flex">
+                  <Typography
+                    className={`${classes.title} first-card-text ${k}`}
+                    color="textSecondary"
+                    gutterBottom
+                  >
+                    {h1text}
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} className="card-flex2">
+                  <Typography
+                    variant="body2"
+                    component="p"
+                    className={`second-card-text ${j}`}
+                  >
+                    {h2text}
+                  </Typography>
+                </Grid>
               </Grid>
-              <Grid item xs={12} className="card-flex2">
-                <Typography
-                  variant="body2"
-                  component="p"
-                  className={`second-card-text ${j}`}
-                >
-                  {h2text}
-                </Typography>
-              </Grid>
-            </Grid>
+            )}
           </div>
         </CardContent>
       </Card>
