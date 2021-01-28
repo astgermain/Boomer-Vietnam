@@ -71,7 +71,8 @@ body {
 .margin-div {
   margin: 0 12.5vw;
 }
-
+.main-head-h1 {
+}
 .section {
   display: flex !important;
 }
@@ -116,6 +117,14 @@ body {
   display: flex;
   text-align: center;
   height: calc(100vh - 125px);
+}
+
+.divider {
+  width: 60%;
+  background-color: #01a2c6;
+  height: 5px;
+  display: table;
+  align-self: flex-start;
 }
 
 .g-row-cell {
