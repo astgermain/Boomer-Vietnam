@@ -144,7 +144,13 @@ const IndexPage = ({ data, location, width }) => {
                           </Grid>
                           <Grid container xs={7} className="g-row-cell">
                             <Grid container xs={12} className="s1-p1-move">
-                              <Grid item sm={11} md={10} lg={8} className="s1-p1-item">
+                              <Grid
+                                item
+                                sm={11}
+                                md={10}
+                                lg={8}
+                                className="s1-p1-item"
+                              >
                                 <h1 className="main-head-h1">
                                   Welcome To<br></br>
                                   Boomer Vietnam
@@ -552,7 +558,7 @@ const IndexPage = ({ data, location, width }) => {
                         >
                           <Grid className="box-container" container lg={12}>
                             <Grid item xs={12}>
-                              <h1>
+                              <p>
                                 Boomer Vietnam is your partner for any products
                                 or services you want from Vietnam. Our large
                                 team in Vietnam boasts a staff of manufacturing,
@@ -561,44 +567,43 @@ const IndexPage = ({ data, location, width }) => {
                                 also have a U.S based headquarters to handle all
                                 of the details with a working relationship with
                                 Vietnam.
-                                <Grid item xs={12}>
-                                  <h1>
-                                    Boomer Vietnam partners with the top
-                                    manufacturing, technology, packaging,
-                                    inspection, and logistic companies in
-                                    Vietnam and has manufactured and sold over
-                                    $50 million worth of products from Vietnam
-                                    in the last nine months.
-                                  </h1>
-                                </Grid>
-                                <Grid item xs={12}>
-                                  <h1>
-                                    With fast communication and turn- around
-                                    time, we can get your samples and price
-                                    quotes in as little as three weeks. If you
-                                    decide to select Boomer Vietnam as your
-                                    partner, our production and delivery times
-                                    are much faster than the industry standard.
-                                    Let us prove to you that we can help your
-                                    business thrive through Vietnam sourcing.
-                                  </h1>
-                                </Grid>
-                                <Grid item xs={12}>
-                                  <h1>
-                                    As one of the largest and fastest-growing
-                                    economies in the Asia manufacturing hub,
-                                    Vietnam has become the go-to country for a
-                                    variety of product and service categories in
-                                    recent years. Vietnamese exports to the
-                                    United States alone are increasing at over
-                                    20-30% per year. Many large international
-                                    brands have moved some or all their
-                                    manufacturing from China to Vietnam
-                                    including big names like Samsung®, Nike®,
-                                    Apple®, and Adidas®.
-                                  </h1>
-                                </Grid>
-                              </h1>
+                              </p>
+                            </Grid>
+                            <Grid item xs={12}>
+                              <p>
+                                Boomer Vietnam partners with the top
+                                manufacturing, technology, packaging,
+                                inspection, and logistic companies in Vietnam
+                                and has manufactured and sold over $50 million
+                                worth of products from Vietnam in the last nine
+                                months.
+                              </p>
+                            </Grid>
+                            <Grid item xs={12}>
+                              <p>
+                                With fast communication and turn- around time,
+                                we can get your samples and price quotes in as
+                                little as three weeks. If you decide to select
+                                Boomer Vietnam as your partner, our production
+                                and delivery times are much faster than the
+                                industry standard. Let us prove to you that we
+                                can help your business thrive through Vietnam
+                                sourcing.
+                              </p>
+                            </Grid>
+                            <Grid item xs={12}>
+                              <p>
+                                As one of the largest and fastest-growing
+                                economies in the Asia manufacturing hub, Vietnam
+                                has become the go-to country for a variety of
+                                product and service categories in recent years.
+                                Vietnamese exports to the United States alone
+                                are increasing at over 20-30% per year. Many
+                                large international brands have moved some or
+                                all their manufacturing from China to Vietnam
+                                including big names like Samsung®, Nike®,
+                                Apple®, and Adidas®.
+                              </p>
                             </Grid>
                           </Grid>
                         </Grid>
