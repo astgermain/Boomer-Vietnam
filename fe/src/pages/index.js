@@ -145,10 +145,11 @@ const IndexPage = ({ data, location, width }) => {
                           <Grid container xs={7} className="g-row-cell">
                             <Grid container xs={12} className="s1-p1-move">
                               <Grid item sm={11} md={10} lg={8} className="s1-p1-item">
-                                <h1>
+                                <h1 className="main-head-h1">
                                   Welcome To<br></br>
                                   Boomer Vietnam
                                 </h1>
+                                <div className="divider"></div>
                                 <h2 className="headline-text">
                                   <span className="headline-text-2">
                                   Boomer Vietnam is your partner for any products or services you want from Vietnam. Our large team in Vietnam boasts a staff of manufacturing, technology, packaging, quality inspection, and logistics experts that are Vietnamese locals. We also have a U.S based headquarters to handle all of the details with a working relationship with Vietnam.
