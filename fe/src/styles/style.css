@@ -85,6 +85,69 @@ body {
   padding-top: 125px;
 }
 
+
+@media only screen and (max-width: 960px) {
+  .box-container {
+    justify-content: center !important;
+  }
+  .fsection {
+    padding-top: 100px !important;
+  }
+  
+  .fsection2 {
+    padding-top: 100px !important;
+  }
+
+  .g-row {
+    justify-content: center;
+    align-self: center;
+    display: flex;
+    text-align: center;
+    height: calc(100vh - 100px) !important;
+  }
+  .g-row-start1 {
+    justify-content: center;
+    align-self: center;
+    display: flex;
+    text-align: center;
+    height: calc(0.65 * (100vh - 100px)) !important;
+  }
+  .g-row-start2 {
+    justify-content: center;
+    align-self: center;
+    display: flex;
+    text-align: center;
+    height: calc(0.35 * (100vh - 100px)) !important;
+  }
+  .g-row-start3 {
+    justify-content: center;
+    align-self: center;
+    display: flex;
+    text-align: center;
+    height: calc(100vh - 100px) !important;
+  }
+  .section-p2 {
+    margin: 0 2.5vw !important;
+    height: calc(100vh - 100px) !important;
+    background: white;
+  }
+  .section-p3 {
+    margin: 0 2.5vw;
+    height: calc(100vh - 100px) !important;
+    background: white;
+  }
+  .section-p4 {
+    height: calc(100vh - 100px) !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 12.5vw;
+    background: white;
+  }
+  
+}
+
+
 .p1-button {
   color: white !important;
   background-color: #01a2c6 !important;
@@ -125,6 +188,11 @@ body {
   height: 5px;
   display: table;
   align-self: flex-start;
+  max-width: 200px;
+}
+
+.align-left {
+  text-align: left;
 }
 
 .g-row-cell {
@@ -195,6 +263,7 @@ body {
   background: white;
 }
 .section-p3 {
+  margin: 0 2.5vw;
   height: calc(100vh - 125px);
   background: white;
 }

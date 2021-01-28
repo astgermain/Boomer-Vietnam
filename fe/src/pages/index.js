@@ -113,7 +113,7 @@ const IndexPage = ({ data, location, width }) => {
           setToTop(fullpageApi);
           return (
             <ReactFullpage.Wrapper>
-              <div className="section fsection fp-auto-height">
+              <div className="section fsection">
                 {/*
                 <Typography variant="h1" component="h2">
                   Boomer Vietnam
@@ -473,21 +473,26 @@ const IndexPage = ({ data, location, width }) => {
                   */}
                 </Grid>
               </div>
-              <div className="section fsection2 fp-auto-height">
+              <div className="section fsection2">
                 <div className="p2-background">
                   <section className="section-p2">
                     <Grid container className="g-row">
                       <Grid container className="g-row-start3">
+                      
+       
+      
                         <Grid container xs={12} className="g-row-cell">
+                        <Hidden mdDown>
                           <Grid container xs={6} className="g-row-cell-boxes">
                             <img
                               src="./static/section2img.png"
                               className="box-image"
                             ></img>
                           </Grid>
+                          </Hidden>
                           <Grid
                             container
-                            xs={6}
+                            sm={10} md={8} lg={6}
                             className="g-row-cell-boxes2 boxes"
                           >
                             <Grid className="box-container" container lg={12}>
@@ -540,37 +545,25 @@ const IndexPage = ({ data, location, width }) => {
                   </section>
                 </div>
               </div>
-              <div className="section fsection fp-auto-height">
+              <div className="section fsection">
                 <section className="section-p3">
                   <Grid container className="g-row">
                     <Grid container className="g-row-start3">
                       <Grid container xs={12} className="g-row-cell">
-                        <Grid container xs={6} className="g-row-cell-boxes">
-                          <img
-                            src="./static/section3img.png"
-                            className="box-image"
-                          ></img>
-                        </Grid>
                         <Grid
                           container
-                          xs={6}
+                          lg={8}
+                          md={10}
+                          sm={11}
                           className="g-row-cell-boxes2 boxes"
                         >
                           <Grid className="box-container" container lg={12}>
                             <Grid item xs={12}>
-                              <p>
-                                Boomer Vietnam is your partner for any products
-                                or services you want from Vietnam. Our large
-                                team in Vietnam boasts a staff of manufacturing,
-                                technology, packaging, quality inspection, and
-                                logistics experts that are Vietnamese locals. We
-                                also have a U.S based headquarters to handle all
-                                of the details with a working relationship with
-                                Vietnam.
-                              </p>
+                              <h1 className="align-left">Our Story</h1>
                             </Grid>
+                            <div className="divider"></div>
                             <Grid item xs={12}>
-                              <p>
+                              <p className="align-left">
                                 Boomer Vietnam partners with the top
                                 manufacturing, technology, packaging,
                                 inspection, and logistic companies in Vietnam
@@ -580,7 +573,7 @@ const IndexPage = ({ data, location, width }) => {
                               </p>
                             </Grid>
                             <Grid item xs={12}>
-                              <p>
+                              <p className="align-left">
                                 With fast communication and turn- around time,
                                 we can get your samples and price quotes in as
                                 little as three weeks. If you decide to select
@@ -592,7 +585,7 @@ const IndexPage = ({ data, location, width }) => {
                               </p>
                             </Grid>
                             <Grid item xs={12}>
-                              <p>
+                              <p className="align-left">
                                 As one of the largest and fastest-growing
                                 economies in the Asia manufacturing hub, Vietnam
                                 has become the go-to country for a variety of
@@ -635,7 +628,7 @@ const IndexPage = ({ data, location, width }) => {
                   </Grid>
                 </section>
               </div>
-              <div className="section fsection fp-auto-height">
+              <div className="section fsection">
                 <section className="section-p4">
                   <Contact />
                 </section>
