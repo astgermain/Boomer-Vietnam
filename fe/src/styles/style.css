@@ -166,6 +166,7 @@ body {
 .s1-p1-move {
   text-align: left;
   margin-left: 5vw;
+  height: 75%;
 }
 .s1-p1-text {
   font-size: 38px !important;
@@ -274,13 +275,21 @@ body {
   height: 30px;
   justify-content: center;
   align-items: center;
+  min-width: 30px;
+  min-height: 30px;
 }
 
 .headline-text {
-  font-size: 12px;
-  height: 30px;
+  font-size: 16px;
+  height: auto;
   display: flex;
-  align-items: center;
+}
+
+.s1-p1-item {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
 }
 
 .card-spacing {
@@ -311,4 +320,3 @@ body {
   width: 100%;
   max-width: 500px;
 }
-

@@ -42,28 +42,31 @@ export default function CardGraphic({
   isBox,
   handleChange,
   h1text,
-  h2text
+  h2text,
 }) {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
   let g = classes.root;
-  let h, i, j, k;
+  let h, i, j, k, svgColor;
   if (hasColor) {
     g = `hasColor`;
     h = `card-content`;
     i = `top-content`;
     j = `bottom-content`;
+    svgColor = "white"
   } else if (hasColor2) {
     g = `hasColorBox box`;
     h = `card-content2`;
     i = `top-content2`;
     j = `bottom-content2`;
+    svgColor = "white"
   } else if (isBox) {
     g = `box`;
     h = `card-content2`;
     i = `top-content2`;
     j = `bottom-content2`;
     k = `colorText`;
+    svgColor = "white"
   } else {
     h = `card-content`;
     i = `top-content`;
@@ -72,36 +75,36 @@ export default function CardGraphic({
   }
   return (
     <Button size="small" onClick={handleChange} className="card-button">
-    <Card className={g} variant="outlined">
-      <CardContent className={h}>
-        <div className={i}>
-          <SVG name={svg} />
-        </div>
-        <div className={j}>
-          <Grid container xs={12}>
-            <Grid item xs={12}>
-              <Typography
-                className={`${classes.title} first-card-text ${k}`}
-                color="textSecondary"
-                gutterBottom
-              >
-                {h1text}
-              </Typography>
-
-              <Typography
-                variant="body2"
-                component="p"
-                className={`second-card-text ${k}`}
-              >
-                {h2text}
-              </Typography>
+      <Card className={g} variant="outlined">
+        <CardContent className={h}>
+          
+          <div className={j}>
+            <Grid container xs={12}>
+              <Grid item xs={12}>
+                <SVG name={svg} color={svgColor}/>
+              </Grid>
+              <Grid item xs={12} className="card-flex">
+                <Typography
+                  className={`${classes.title} first-card-text ${k}`}
+                  color="textSecondary"
+                  gutterBottom
+                >
+                  {h1text}
+                </Typography>
+              </Grid>
+              <Grid item xs={12} className="card-flex2">
+                <Typography
+                  variant="body2"
+                  component="p"
+                  className={`second-card-text ${k}`}
+                >
+                  {h2text}
+                </Typography>
+              </Grid>
             </Grid>
-        
-        
-          </Grid>
-        </div>
-      </CardContent>
-    </Card>
+          </div>
+        </CardContent>
+      </Card>
     </Button>
   );
 }

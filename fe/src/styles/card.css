@@ -45,7 +45,8 @@
 
 
 .card-content {
-    text-align: start;
+    align-self: center;
+    text-align: center;
     width: 100%;
     padding: 10px !important;
 }
@@ -61,16 +62,15 @@
 
 .top-content {
     width: 100%;
-    height: 50%;
+    height: 20%;
     display: flex;
-    align-items: flex-start;
+    justify-content: center;
 }
 
 .bottom-content {
     width: 100%;
-    height: 50%;
+    height: 80%;
     display: flex;
-    align-items: flex-end;
 }
 
 .top-content2 {
@@ -91,11 +91,14 @@
 .first-card-text {
     color: #00A1C6 !important;
     font-weight: 600 !important;
+    text-align: center !important;
+    font-size: .85rem !important;
 }
 .second-card-text {
     color:black !important;
-    font-weight: 600 !important;
-    font-size: .675rem !important;
+    font-weight: 400 !important;
+    font-size: .8rem !important;
+    text-align: center !important;
 }
 
 .colorText {
@@ -104,6 +107,14 @@
 
 .card-action {
     padding: 0 !important;
+}
+
+.card-flex {
+    align-self: flex-start;
+}
+
+.card-flex2 {
+    align-self: flex-end;
 }
 
 .card-button {

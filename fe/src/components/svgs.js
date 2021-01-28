@@ -1,245 +1,183 @@
 import * as React from "react";
-
-export default function SVG({ name }) {
+import "../styles/svg.css"
+export default function SVG({ name, color }) {
   //check, world, clipboard, building
+  console.log("Name: ", name, " Color: ", color)
+  let r = "";
+  if (color != "white") {
+    console.log('white')
+    r = "svgWhite"
+  }
+  else{
+    r = "svgBlack"
+  }
   const svg = {
     check: (
       <>
         <svg
-          width="38px"
-          height="38px"
-          viewBox="0 0 37 29"
-          version="1.1"
+          id="Layer_2"
+          data-name="Layer 2"
           xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 500 500"
+          width="48px"
+          height="48px"
+          className={r}
         >
-          <title>icons/filled/navigation/check_24px</title>
-          <defs>
-            <polygon
-              id="path-check"
-              points="11.75 22.6875 3.0625 14 0.104166667 16.9375 11.75 28.5833333 36.75 3.58333333 33.8125 0.645833333"
-            ></polygon>
-          </defs>
-          <g
-            id="Page-check"
-            stroke="none"
-            stroke-width="1"
-            fill="none"
-            fill-rule="evenodd"
-          >
-            <g id="Home-check" transform="translate(-452.000000, -778.000000)">
-              <g
-                id="icons/filled/navigation/check_24px"
-                transform="translate(452.000000, 778.000000)"
-              >
-                <mask id="mask-check" fill="white">
-                  <use href="#path-check"></use>
-                </mask>
-                <g id="icon/navigation/check_24px" fill-rule="nonzero"></g>
-                <g id="Group-check" mask="url(#mask-check)">
-                  <g transform="translate(-7.000000, -11.000000)" id="↳-Color-check">
-                    <rect
-                      id="↳-👉Icon-Style-check"
-                      fill="#000000"
-                      fill-rule="nonzero"
-                      x="0"
-                      y="0"
-                      width="50"
-                      height="50"
-                    ></rect>
-                  </g>
-                </g>
-              </g>
-            </g>
-          </g>
+          <defs></defs>
+          <polyline
+            class="cls-1"
+            points="109.74 236.05 197.63 170.26 240.79 215 384.8 112.92"
+          />
+          <polyline
+            class="cls-1"
+            points="356.17 110.63 384.8 112.9 382.31 144.29"
+          />
+          <line class="cls-1" x1="89" y1="392.72" x2="411" y2="392.72" />
+          <rect
+            class="cls-2"
+            x="326.41"
+            y="207.16"
+            width="63.31"
+            height="185.56"
+          />
+          <rect
+            class="cls-2"
+            x="217.8"
+            y="281.93"
+            width="63.85"
+            height="110.24"
+          />
+          <rect
+            class="cls-2"
+            x="109.74"
+            y="327.23"
+            width="63.85"
+            height="65.49"
+          />
         </svg>
       </>
     ),
     building: (
       <>
         <svg
-          width="38px"
-          height="38px"
-          viewBox="0 0 38 38"
-          version="1.1"
+          id="Layer_2"
+          data-name="Layer 2"
           xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 500 500"
+          width="48px"
+          height="48px"
+          className={r}
         >
-          <title>icons/filled/places/meeting_room_24px</title>
-          <defs>
-            <path
-              d="M23.1666667,6.5 L23.1666667,37.75 L0.25,37.75 L0.25,33.5833333 L4.41666667,33.5833333 L4.41666667,0.25 L23.1666667,0.25 L23.1666667,2.33333333 L33.5833333,2.33333333 L33.5833333,33.5833333 L37.75,33.5833333 L37.75,37.75 L29.4166667,37.75 L29.4166667,6.5 L23.1666667,6.5 Z M14.8333333,16.9166667 L14.8333333,21.0833333 L19,21.0833333 L19,16.9166667 L14.8333333,16.9166667 Z"
-              id="path-build"
-            ></path>
-          </defs>
-          <g
-            id="Page-build"
-            stroke="none"
-            stroke-width="1"
-            fill="none"
-            fill-rule="evenodd"
-          >
-            <g id="Home-build" transform="translate(-744.000000, -773.000000)">
-              <rect
-                id="Rectangle-Build"
-                fill="#00A1C6"
-                x="689"
-                y="724"
-                width="256"
-                height="256"
-              ></rect>
-              <g
-                id="icons/filled/places/meeting_room_24px"
-                transform="translate(744.000000, 773.000000)"
-              >
-                <mask id="mask-build" fill="white">
-                  <use href="#path-build"></use>
-                </mask>
-                <g id="icon/places/meeting_room_24px" fill-rule="nonzero"></g>
-                <g id="Group-check" mask="url(#mask-build)">
-                  <g transform="translate(-6.000000, -6.000000)" id="↳-Color-Build">
-                    <rect
-                      id="↳-👉Icon-Style-Build"
-                      fill="#FFFFFF"
-                      fill-rule="nonzero"
-                      x="0"
-                      y="0"
-                      width="50"
-                      height="50"
-                    ></rect>
-                  </g>
-                </g>
-              </g>
-            </g>
-          </g>
+          <defs></defs>
+          <path
+            class="cls-1"
+            d="M411.83,140.64l39.72,106.5-76.14,36.33-48.82-46.68s-56.28-19.45-58.35-60.41l-21.52,3.72s-34.4,35.59-52.58,15.31,40.69-67.66,70.79-61.65l73.66,35.58Z"
+          />
+          <path
+            class="cls-1"
+            d="M231.29,141.43c-38.19-3.92-74.1,18.81-74.1,18.81l-44.12-27L51.83,226.86l81.93,58.2"
+          />
+          <path
+            class="cls-1"
+            d="M166.66,284.07s-21.52-21.62-33,2.17,2.37,30.92,14.27,32.67"
+          />
+          <path
+            class="cls-1"
+            d="M197.59,294.52s-13.35-39-41.07,2.74,20.53,42.26,20.53,42.26"
+          />
+          <path
+            class="cls-1"
+            d="M224.59,308.56s-17-29.66-34.55-7.22-15.67,47.34-.42,53.28c8,3.1,17.78-.45,17.78-.45"
+          />
+          <path
+            class="cls-1"
+            d="M241.86,326.38s-8-29.4-29.48-11-4.19,44,3.47,47.65c7.88,3.72,19,6.31,24.05-3.1S241.86,326.38,241.86,326.38Z"
+          />
+          <path
+            class="cls-1"
+            d="M242.8,349.55S250.68,358,271.55,367c20.38,8.8,22.35-14.58,22.35-14.58,16.13,16.14,34.55-6,31-18.42,10.76,9.42,33.21-7.82,28-23.37,17.48,9.51,37.55-9.63,22.44-27.19"
+          />
+          <line class="cls-1" x1="257.17" y1="314.28" x2="293.9" y2="352.45" />
+          <line class="cls-1" x1="324.93" y1="334.03" x2="278.69" y2="285.83" />
+          <line class="cls-1" x1="352.97" y1="310.66" x2="302.9" y2="263.59" />
         </svg>
       </>
     ),
     world: (
       <>
         <svg
-          width="38px"
-          height="38px"
-          viewBox="0 0 43 42"
-          version="1.1"
+          id="Layer_2"
+          data-name="Layer 2"
           xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 500 500"
+          width="48px"
+          height="48px"
+          className={r}
         >
-          <title>icons/filled/social/publicon/social/24px</title>
-          <defs>
-            <path
-              d="M25,4.16666667 C13.5,4.16666667 4.16666667,13.5 4.16666667,25 C4.16666667,36.5 13.5,45.8333333 25,45.8333333 C36.5,45.8333333 45.8333333,36.5 45.8333333,25 C45.8333333,13.5 36.5,4.16666667 25,4.16666667 Z M22.9166667,41.5208333 C14.6875,40.5 8.33333333,33.5 8.33333333,25 C8.33333333,23.7083333 8.5,22.4791667 8.77083333,21.2708333 L18.75,31.25 L18.75,33.3333333 C18.75,35.625 20.625,37.5 22.9166667,37.5 L22.9166667,41.5208333 Z M37.2916667,36.2291667 C36.75,34.5416667 35.2083333,33.3333333 33.3333333,33.3333333 L31.25,33.3333333 L31.25,27.0833333 C31.25,25.9375 30.3125,25 29.1666667,25 L16.6666667,25 L16.6666667,20.8333333 L20.8333333,20.8333333 C21.9791667,20.8333333 22.9166667,19.8958333 22.9166667,18.75 L22.9166667,14.5833333 L27.0833333,14.5833333 C29.375,14.5833333 31.25,12.7083333 31.25,10.4166667 L31.25,9.5625 C37.3541667,12.0416667 41.6666667,18.0208333 41.6666667,25 C41.6666667,29.3333333 40,33.2708333 37.2916667,36.2291667 Z"
-              id="path-world"
-            ></path>
-          </defs>
-          <g
-            id="Page-world"
-            stroke="none"
-            stroke-width="1"
-            fill="none"
-            fill-rule="evenodd"
-          >
-            <g id="Home-world" transform="translate(-1024.000000, -771.000000)">
-              <rect
-                id="Rectangle-Copy-world"
-                fill="#FAFAFA"
-                x="975"
-                y="724"
-                width="256"
-                height="256"
-              ></rect>
-              <g
-                id="icons/filled/social/publicon/social/24px"
-                transform="translate(1020.500000, 767.000000)"
-              >
-                <mask id="mask-world" fill="white">
-                  <use href="#path-world"></use>
-                </mask>
-                <g
-                  id="icon/social/publicon/social/24px"
-                  fill-rule="nonzero"
-                ></g>
-                <g
-                  id="Group"
-                  mask="url(#mask-world)"
-                  fill="#000000"
-                  fill-rule="nonzero"
-                >
-                  <g id="↳-Color-world">
-                    <rect
-                      id="↳-👉Icon-Style"
-                      x="0"
-                      y="0"
-                      width="50"
-                      height="50"
-                    ></rect>
-                  </g>
-                </g>
-              </g>
-            </g>
-          </g>
+          <defs></defs>
+          <polyline
+            className="cls-1"
+            points="100 350.26 100 256 405 256 381.29 348.01"
+          />
+          <rect className="cls-1" x="226.5" y="222" width="74" height="34" />
+          <rect className="cls-1" x="300.5" y="222" width="74" height="34" />
+          <rect className="cls-1" x="261.5" y="188" width="74" height="34" />
+          <rect
+            className="cls-1"
+            x="83.53"
+            y="186.14"
+            width="105.73"
+            height="34"
+            transform="translate(339.53 66.74) rotate(90)"
+          />
+          <path
+            className="cls-1"
+            d="M435,328.68c0,13.43-28.68,24.32-64,24.32s-64.06-10.89-64.06-24.32c0,13.43-28.67,24.32-64.05,24.32s-64.05-10.89-64.05-24.32c0,13.43-28.68,24.32-64.06,24.32s-64-10.89-64-24.32"
+          />
         </svg>
       </>
     ),
     clipboard: (
       <>
         <svg
-          width="38px"
-          height="38px"
-          viewBox="0 0 38 42"
-          version="1.1"
+          id="Layer_2"
+          data-name="Layer 2"
           xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 500 500"
+          width="48px"
+          height="48px"
+          className={r}
         >
-          <title>icons/filled/action/assignment_turned_in_24px</title>
-          <defs>
-            <path
-              d="M39.5833333,6.25 L30.875,6.25 C30,3.83333333 27.7083333,2.08333333 25,2.08333333 C22.2916667,2.08333333 20,3.83333333 19.125,6.25 L10.4166667,6.25 C8.125,6.25 6.25,8.125 6.25,10.4166667 L6.25,39.5833333 C6.25,41.875 8.125,43.75 10.4166667,43.75 L39.5833333,43.75 C41.875,43.75 43.75,41.875 43.75,39.5833333 L43.75,10.4166667 C43.75,8.125 41.875,6.25 39.5833333,6.25 Z M25,6.25 C26.1458333,6.25 27.0833333,7.1875 27.0833333,8.33333333 C27.0833333,9.47916667 26.1458333,10.4166667 25,10.4166667 C23.8541667,10.4166667 22.9166667,9.47916667 22.9166667,8.33333333 C22.9166667,7.1875 23.8541667,6.25 25,6.25 Z M20.8333333,35.4166667 L12.5,27.0833333 L15.4375,24.1458333 L20.8333333,29.5208333 L34.5625,15.7916667 L37.5,18.75 L20.8333333,35.4166667 Z"
-              id="path-clip"
-            ></path>
-          </defs>
-          <g
-            id="Page-clip"
-            stroke="none"
-            stroke-width="1"
-            fill="none"
-            fill-rule="evenodd"
-          >
-            <g id="Home-clip" transform="translate(-1314.000000, -769.000000)">
-              <rect
-                id="Rectangle-Copy-clip"
-                fill="#FAFAFA"
-                x="1264"
-                y="724"
-                width="256"
-                height="256"
-              ></rect>
-              <g
-                id="icons/filled/action/assignment_turned_in_24px"
-                transform="translate(1308.000000, 767.000000)"
-              >
-                <mask id="mask-clip" fill="white">
-                  <use href="#path-clip"></use>
-                </mask>
-                <g
-                  id="icon/action/assignment_turned_in_24px"
-                  fill-rule="nonzero"
-                ></g>
-                <g
-                  id="Group-clip"
-                  mask="url(#mask-clip)"
-                  fill="#000000"
-                  fill-rule="nonzero"
-                >
-                  <g id="↳-Color-clip">
-                    <rect
-                      id="↳-👉Icon-Style-clip"
-                      x="0"
-                      y="0"
-                      width="50"
-                      height="50"
-                    ></rect>
-                  </g>
-                </g>
-              </g>
-            </g>
-          </g>
+          <defs></defs>
+          <rect
+            class="cls-1"
+            x="101.69"
+            y="177.78"
+            width="297.35"
+            height="209.48"
+          />
+          <polygon
+            class="cls-1"
+            points="399.05 177.78 101.69 177.78 139.26 110.63 360.95 110.63 399.05 177.78"
+          />
+          <rect
+            class="cls-2"
+            x="203.28"
+            y="175.66"
+            width="94.18"
+            height="97.88"
+          />
+          <polygon
+            class="cls-2"
+            points="216.45 110.63 282.12 110.63 297.46 176.4 203.28 176.4 216.45 110.63"
+          />
+          <rect
+            class="cls-2"
+            x="133.09"
+            y="302.39"
+            width="78.2"
+            height="56.87"
+          />
         </svg>
       </>
     ),

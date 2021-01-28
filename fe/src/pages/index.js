@@ -144,36 +144,18 @@ const IndexPage = ({ data, location, width }) => {
                           </Grid>
                           <Grid container xs={7} className="g-row-cell">
                             <Grid container xs={12} className="s1-p1-move">
-                              <Grid item xs={12} className="">
+                              <Grid item xs={12} className="s1-p1-item">
                                 <h1>
-                                  Politically Stable,<br></br>
-                                  Business Friendly
+                                  Welcome To<br></br>
+                                  Boomer Vietnam
                                 </h1>
-                              </Grid>
-                              <Grid item xs={12} className="">
                                 <h2 className="headline-text">
-                                  <div className="blue-square">1</div>
-                                  <span className="adjust-left">
-                                    Consectetur Adipiscing
+                                  <span className="">
+                                  Boomer Vietnam is your partner for any products or services you want from Vietnam. Our large team in Vietnam boasts a staff of manufacturing, technology, packaging, quality inspection, and logistics experts that are Vietnamese locals. We also have a U.S based headquarters to handle all of the details with a working relationship with Vietnam.
                                   </span>
                                 </h2>
                               </Grid>
-                              <Grid item xs={12} className="">
-                                <h2 className="headline-text">
-                                  <div className="blue-square">2</div>
-                                  <span className="adjust-left">
-                                    Consectetur Adipiscing
-                                  </span>
-                                </h2>
-                              </Grid>
-                              <Grid item xs={12} className="">
-                                <h2 className="headline-text">
-                                  <div className="blue-square">3</div>
-                                  <span className="adjust-left">
-                                    Consectetur Adipiscing
-                                  </span>
-                                </h2>
-                              </Grid>
+                              
                             </Grid>
                           </Grid>
                         </Grid>
@@ -210,7 +192,7 @@ const IndexPage = ({ data, location, width }) => {
                                 <h2 className="headline-text">
                                   <div className="blue-square">1</div>
                                   <span className="adjust-left">
-                                    Consectetur Adipiscing
+                                  Manufacturers follow international standards and have proper certifications
                                   </span>
                                 </h2>
                               </Grid>
@@ -218,7 +200,8 @@ const IndexPage = ({ data, location, width }) => {
                                 <h2 className="headline-text">
                                   <div className="blue-square">2</div>
                                   <span className="adjust-left">
-                                    Consectetur Adipiscing
+                                  Made in Vietnam label is more appealing in certain markets
+
                                   </span>
                                 </h2>
                               </Grid>
@@ -226,7 +209,7 @@ const IndexPage = ({ data, location, width }) => {
                                 <h2 className="headline-text">
                                   <div className="blue-square">3</div>
                                   <span className="adjust-left">
-                                    Consectetur Adipiscing
+                                  Home to top technology experts in website development, coding, and software engineering
                                   </span>
                                 </h2>
                               </Grid>
@@ -419,29 +402,29 @@ const IndexPage = ({ data, location, width }) => {
                       >
                         <CardGraphic
                           svg="check"
-                          h1text="Plan"
-                          h2text="Product Planning + Validation"
+                          h1text="Benefits"
+                          h2text="Why Vietnam-Based Manufacturing"
                           hasColor={plan}
                           handleChange={handlePlan}
                         />
                         <CardGraphic
                           svg="building"
-                          h1text="Find"
-                          h2text="Sourcing + Samples"
+                          h1text="Labor Force"
+                          h2text="Learn About Our Hard Workers"
                           hasColor={find}
                           handleChange={handleFind}
                         />
                         <CardGraphic
                           svg="world"
-                          h1text="Product Manufacturing"
-                          h2text="Inspection + Production"
+                          h1text="Logistics"
+                          h2text="Our Superior Logistic Network With Faster Times And Lower Cost"
                           hasColor={make}
                           handleChange={handleMake}
                         />
                         <CardGraphic
                           svg="clipboard"
-                          h1text="Ship"
-                          h2text="Shipping + Prep Guidance"
+                          h1text="Product Manufacturing"
+                          h2text="Learn About The High Qualitys Made In Vietnam"
                           hasColor={ship}
                           handleChange={handleShip}
                         />
