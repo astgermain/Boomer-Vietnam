@@ -60,6 +60,9 @@
 
 body {
 }
+.menu {
+  position: fixed !important;
+}
 .main {
   background-color: white !important;
   background-image: url("/static/BoomerVietnamPattern.png");
@@ -104,6 +107,9 @@ body {
   }
 }
 @media only screen and (max-width: 960px) {
+  .section-p4 {
+    margin: 0 2.5vw !important;
+  }
   .box-container {
     justify-content: center !important;
   }
@@ -154,14 +160,6 @@ body {
   .section-p3 {
     margin: 0 2.5vw;
     height: calc(100vh - 100px) !important;
-    background: white;
-  }
-  .section-p4 {
-    height: calc(100vh - 100px) !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 0 12.5vw;
     background: white;
   }
   

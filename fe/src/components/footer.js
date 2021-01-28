@@ -12,7 +12,6 @@ const Footer = ({ fullpageApi }) => {
   const handleScroll = () => {
     fullpageApi.moveTo(1);
   };
-  console.log(fullpageApi);
 
   return (
     <section className="footer">

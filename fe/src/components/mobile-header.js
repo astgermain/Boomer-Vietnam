@@ -108,7 +108,7 @@ const MobileHeader = ({fullpageApi}) => {
   );
 
   return (
-    <header className="header">
+    <header className="header" id="header">
       <Container
         maxWidth={false}
         style={{ backgroundColor: "white", height: "100px", padding: "0", marginLeft: "12.5vw", marginRight: "12.5vw" }}

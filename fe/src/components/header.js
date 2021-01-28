@@ -108,7 +108,7 @@ const Header = ({fullpageApi}) => {
   );
 
   return (
-    <header className="header">
+    <header className="header" id="header">
       <Container
         maxWidth={false}
         style={{ backgroundColor: "white", height: "125px", padding: "0", marginLeft: "12.5vw", marginRight: "12.5vw" }}
@@ -149,16 +149,16 @@ const Header = ({fullpageApi}) => {
               }}
              className="header-links"
             >
-              <Link href="#" onClick={moveTo1} className="header-link">
+              <Link href="#firstPage" className="header-link">
                   Home
               </Link> 
-              <Link href="#" onClick={moveTo2} className="header-link">
+              <Link href="#secondPage" className="header-link">
                   Services
               </Link>
-              <Link href="#" onClick={moveTo3} className="header-link">
+              <Link href="#thirdPage" className="header-link">
                   About
               </Link>
-              <Link href="#" onClick={moveTo4} className="header-link">
+              <Link href="#fourthPage" className="header-link">
                   Contact Us
               </Link>
               {/*
