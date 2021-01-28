@@ -4,7 +4,7 @@ export default function SVG({ name, color }) {
   //check, world, clipboard, building
   console.log("Name: ", name, " Color: ", color)
   let r = "";
-  if (color != "white") {
+  if (color == "white") {
     console.log('white')
     r = "svgWhite"
   }

@@ -244,6 +244,10 @@ body {
   font-weight: 600;
 }
 
+.headline-text-2 {
+  font-weight: 400 !important;
+}
+
 .header-link:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;

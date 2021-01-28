@@ -89,20 +89,23 @@
 }
 
 .first-card-text {
-    color: #00A1C6 !important;
+    color: white !important;
     font-weight: 600 !important;
     text-align: center !important;
     font-size: .85rem !important;
 }
 .second-card-text {
-    color:black !important;
+    color:white !important;
     font-weight: 400 !important;
     font-size: .8rem !important;
     text-align: center !important;
 }
 
 .colorText {
-    color: white !important;
+    color: #00A1C6 !important;
+}
+.colorText2 {
+    color: black !important;
 }
 
 .card-action {

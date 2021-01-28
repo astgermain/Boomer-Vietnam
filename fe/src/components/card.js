@@ -66,12 +66,14 @@ export default function CardGraphic({
     i = `top-content2`;
     j = `bottom-content2`;
     k = `colorText`;
+    j = `colorText2`
     svgColor = "white"
   } else {
     h = `card-content`;
     i = `top-content`;
     j = `bottom-content`;
     k = `colorText`;
+    j = `colorText2`
   }
   return (
     <Button size="small" onClick={handleChange} className="card-button">
@@ -96,7 +98,7 @@ export default function CardGraphic({
                 <Typography
                   variant="body2"
                   component="p"
-                  className={`second-card-text ${k}`}
+                  className={`second-card-text ${j}`}
                 >
                   {h2text}
                 </Typography>
