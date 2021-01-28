@@ -1,6 +1,6 @@
 .hasColor {
     border-radius: 0 !important;
-    background-color: #FAFAFA !important;
+    background-color: #00A1C6 !important;
     width: 25vh !important;
     height: 25vh !important;
     min-width: 15vh;
@@ -11,7 +11,7 @@
 }
 
 .hasColorBox {
-    background-color: #FAFAFA !important;
+    background-color: #00A1C6 !important;
     width: 100%;
     height: 10vh;
     display: flex;
@@ -22,7 +22,7 @@
     height: 10vh;
     display: flex;
     border-radius: 0 !important;
-    background-color: #00A1C6;
+    background-color: #FAFAFA;
     box-shadow: none !important;
     max-width: 400px;
     width: calc( .76 *(40vh + 90px));

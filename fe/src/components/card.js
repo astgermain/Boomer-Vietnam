@@ -13,7 +13,7 @@ import "../styles/card.css";
 const useStyles = makeStyles({
   root: {
     borderRadius: 0,
-    backgroundColor: "#00A1C6",
+    backgroundColor: "#FAFAFA",
     height: "22.5vh",
     width: "22.5vh",
     minWidth: "12.5vh",
