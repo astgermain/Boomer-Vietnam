@@ -30,6 +30,7 @@
 
 .box-container {
   padding: 15px 0;
+  justify-content: center;
 }
 
 .boxes {

@@ -84,11 +84,16 @@ body {
 .fsection2 {
   padding-top: 125px;
 }
-
+.about-container {
+  justify-content: center;
+}
 
 @media only screen and (max-width: 960px) {
   .box-container {
     justify-content: center !important;
+  }
+  .about-container {
+    justify-content: flex-start !important;
   }
   .fsection {
     padding-top: 100px !important;
@@ -193,6 +198,7 @@ body {
 
 .align-left {
   text-align: left;
+  margin: 5px 0;
 }
 
 .g-row-cell {
@@ -251,6 +257,7 @@ body {
 
 .story-text {
   font-size: 24px;
+  
 }
 
 .g-row-header {
