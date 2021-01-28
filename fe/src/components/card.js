@@ -81,7 +81,7 @@ export default function CardGraphic({
         <CardContent className={h}>
           
           <div className={j}>
-            <Grid container xs={12}>
+            <Grid item xs={12}>
               <Grid item xs={12}>
                 <SVG name={svg} color={svgColor}/>
               </Grid>

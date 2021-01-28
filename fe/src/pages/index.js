@@ -97,12 +97,7 @@ const IndexPage = ({ data, location, width }) => {
   return (
     <>
       <title>Boomer Vietnam</title>
-      <Hidden mdUp>
-        <MobileHeader />
-      </Hidden>
-      <Hidden smDown>
-        <Header fullpageApi={toTop} />
-      </Hidden>
+
       <ReactFullpage
         // Required when using extensions
         pluginWrapper={pluginWrapper}
@@ -110,9 +105,14 @@ const IndexPage = ({ data, location, width }) => {
         licenseKey={"8734D589-74E74CC7-AA2B9E45-33B07FC5"}
         scrollingSpeed={750} /* Options here */
         render={({ state, fullpageApi }) => {
-          setToTop(fullpageApi);
           return (
             <ReactFullpage.Wrapper>
+              <Hidden mdUp>
+                <MobileHeader />
+              </Hidden>
+              <Hidden smDown>
+                <Header fullpageApi={fullpageApi} />
+              </Hidden>
               <div className="section fsection">
                 {/*
                 <Typography variant="h1" component="h2">
@@ -133,8 +133,8 @@ const IndexPage = ({ data, location, width }) => {
                         mountOnEnter
                         unmountOnExit
                       >
-                        <Grid container lg={12} className="g-row-start1">
-                          <Grid container xs={5} className="g-row-cell">
+                        <Grid item lg={12} className="g-row-start1">
+                          <Grid item xs={5} className="g-row-cell">
                             <Grid item xs={12} className="g-row-cell-s1">
                               <img
                                 src="./static/homeimg1.png"
@@ -142,8 +142,8 @@ const IndexPage = ({ data, location, width }) => {
                               ></img>
                             </Grid>
                           </Grid>
-                          <Grid container xs={7} className="g-row-cell">
-                            <Grid container xs={12} className="s1-p1-move">
+                          <Grid item xs={7} className="g-row-cell">
+                            <Grid item xs={12} className="s1-p1-move">
                               <Grid
                                 item
                                 sm={11}
@@ -184,8 +184,8 @@ const IndexPage = ({ data, location, width }) => {
                         mountOnEnter
                         unmountOnExit
                       >
-                        <Grid container lg={12} className="g-row-start1">
-                          <Grid container xs={5} className="g-row-cell">
+                        <Grid item lg={12} className="g-row-start1">
+                          <Grid item xs={5} className="g-row-cell">
                             <Grid item xs={12} className="g-row-cell-s1">
                               <img
                                 src="./static/homeimg2.png"
@@ -194,8 +194,8 @@ const IndexPage = ({ data, location, width }) => {
                             </Grid>
                           </Grid>
 
-                          <Grid container xs={7} className="g-row-cell">
-                            <Grid container xs={12} className="s1-p1-move">
+                          <Grid item xs={7} className="g-row-cell">
+                            <Grid item xs={12} className="s1-p1-move">
                               <Grid item xs={12} className="">
                                 <h1>
                                   Politically Stable,<br></br>
@@ -244,8 +244,8 @@ const IndexPage = ({ data, location, width }) => {
                         mountOnEnter
                         unmountOnExit
                       >
-                        <Grid container lg={12} className="g-row-start1">
-                          <Grid container xs={5} className="g-row-cell">
+                        <Grid item lg={12} className="g-row-start1">
+                          <Grid item xs={5} className="g-row-cell">
                             <Grid item xs={12} className="g-row-cell-s1">
                               <img
                                 src="./static/homeimg3.png"
@@ -254,8 +254,8 @@ const IndexPage = ({ data, location, width }) => {
                             </Grid>
                           </Grid>
 
-                          <Grid container xs={7} className="g-row-cell">
-                            <Grid container xs={12} className="s1-p1-move">
+                          <Grid item xs={7} className="g-row-cell">
+                            <Grid item xs={12} className="s1-p1-move">
                               <Grid item xs={12} className="">
                                 <h1>
                                   Politically Stable,<br></br>
@@ -300,8 +300,8 @@ const IndexPage = ({ data, location, width }) => {
                         mountOnEnter
                         unmountOnExit
                       >
-                        <Grid container lg={12} className="g-row-start1">
-                          <Grid container xs={5} className="g-row-cell">
+                        <Grid item lg={12} className="g-row-start1">
+                          <Grid item xs={5} className="g-row-cell">
                             <Grid item xs={12} className="g-row-cell-s1">
                               <img
                                 src="./static/homeimg4.png"
@@ -310,8 +310,8 @@ const IndexPage = ({ data, location, width }) => {
                             </Grid>
                           </Grid>
 
-                          <Grid container xs={7} className="g-row-cell">
-                            <Grid container xs={12} className="s1-p1-move">
+                          <Grid item xs={7} className="g-row-cell">
+                            <Grid item xs={12} className="s1-p1-move">
                               <Grid item xs={12} className="">
                                 <h1>
                                   Politically Stable,<br></br>
@@ -356,8 +356,8 @@ const IndexPage = ({ data, location, width }) => {
                         mountOnEnter
                         unmountOnExit
                       >
-                        <Grid container lg={12} className="g-row-start1">
-                          <Grid container xs={5} className="g-row-cell">
+                        <Grid item lg={12} className="g-row-start1">
+                          <Grid item xs={5} className="g-row-cell">
                             <Grid item xs={12} className="g-row-cell-s1">
                               <img
                                 src="./static/homeimg5.png"
@@ -366,8 +366,8 @@ const IndexPage = ({ data, location, width }) => {
                             </Grid>
                           </Grid>
 
-                          <Grid container xs={7} className="g-row-cell">
-                            <Grid container xs={12} className="s1-p1-move">
+                          <Grid item xs={7} className="g-row-cell">
+                            <Grid item xs={12} className="s1-p1-move">
                               <Grid item xs={12} className="">
                                 <h1>
                                   Politically Stable,<br></br>
@@ -413,7 +413,7 @@ const IndexPage = ({ data, location, width }) => {
                     <Grid container className="g-row-start2">
                       {/* <h1>Click to learn more</h1> */}
                       <Grid
-                        container
+                        item
                         xs={12}
                         className="g-row-cell-s2 infographics"
                       >
@@ -478,39 +478,38 @@ const IndexPage = ({ data, location, width }) => {
                   <section className="section-p2">
                     <Grid container className="g-row">
                       <Grid container className="g-row-start3">
-                      
-       
-      
-                        <Grid container xs={12} className="g-row-cell">
-                        <Hidden mdDown>
-                          <Grid container xs={6} className="g-row-cell-boxes">
-                            <img
-                              src="./static/section2img.png"
-                              className="box-image"
-                            ></img>
-                          </Grid>
+                        <Grid item xs={12} className="g-row-cell">
+                          <Hidden mdDown>
+                            <Grid item xs={6} className="g-row-cell-boxes">
+                              <img
+                                src="./static/section2img.png"
+                                className="box-image"
+                              ></img>
+                            </Grid>
                           </Hidden>
                           <Grid
-                            container
-                            sm={10} md={8} lg={6}
+                            item
+                            sm={10}
+                            md={8}
+                            lg={6}
                             className="g-row-cell-boxes2 boxes"
                           >
-                            <Grid className="box-container" container lg={12}>
+                            <Grid className="box-container" item lg={12}>
                               <Paper className="box">
                                 <CardGraphic svg="check" isBox={true} />
                               </Paper>
                             </Grid>
-                            <Grid className="box-container" container lg={12}>
+                            <Grid className="box-container" item lg={12}>
                               <Paper className="box">
                                 <CardGraphic svg="building" hasColor2={true} />
                               </Paper>
                             </Grid>
-                            <Grid className="box-container" container lg={12}>
+                            <Grid className="box-container" item lg={12}>
                               <Paper className="box">
                                 <CardGraphic svg="world" isBox={true} />
                               </Paper>
                             </Grid>
-                            <Grid className="box-container" container lg={12}>
+                            <Grid className="box-container" item lg={12}>
                               <Paper className="box">
                                 <CardGraphic svg="clipboard" isBox={true} />
                               </Paper>
@@ -549,17 +548,19 @@ const IndexPage = ({ data, location, width }) => {
                 <section className="section-p3">
                   <Grid container className="g-row">
                     <Grid container className="g-row-start3">
-                      <Grid container xs={12} className="g-row-cell">
+                      <Grid item xs={12} className="g-row-cell">
                         <Grid
-                          container
+                          item
                           lg={8}
                           md={10}
                           sm={11}
                           className="g-row-cell-boxes2 boxes"
                         >
-                          <Grid className="about-container" container lg={12}>
+                          <Grid className="about-container" item lg={12}>
                             <Grid item xs={12}>
-                              <h1 className="align-left story-text">Our Story</h1>
+                              <h1 className="align-left story-text">
+                                Our Story
+                              </h1>
                             </Grid>
                             <div className="divider"></div>
                             <Grid item xs={12}>
