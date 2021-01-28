@@ -85,9 +85,9 @@ body {
   padding-top: 125px;
 }
 .about-container {
-  justify-content: center;
+  justify-content: flex-start;
 }
-@media only screen and (max-height: 650px) and (min-width: 961) {
+@media only screen and (max-height: 650px) and (min-width: 961px) {
   .g-row-start1 {
     height: calc(100vh - 125px) !important;
   }
@@ -95,7 +95,7 @@ body {
     display: none !important;
   }
 }
-@media only screen and (max-height: 650px) and (max-width: 960) {
+@media only screen and (max-height: 650px) and (max-width: 960px) {
   .g-row-start1 {
     height: calc(100vh - 100px) !important;
   }
