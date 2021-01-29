@@ -83,11 +83,11 @@ body {
 
 .fp-controlArrow.fp-prev {
   border-color: transparent #01a2c6 transparent transparent !important;
-  border-width: 15px 30px 15px 0px;
+  border-width: 15px 30px 15px 0px !important;
 }
 .fp-controlArrow.fp-next {
   border-color: transparent transparent transparent #01a2c6 !important;
-  border-width: 15px 0 15px 30px;
+  border-width: 15px 0 15px 30px !important;
 }
 .home-bot {
   height: calc(40vh - (125px / 2));
