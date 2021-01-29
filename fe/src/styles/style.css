@@ -68,6 +68,11 @@ body {
   background-image: url("/static/BoomerVietnamPattern.png");
   background-size: contain;
 }
+.p2-background {
+  background-color: white !important;
+  background-image: url("/static/BoomerVietnamPattern.png");
+  background-size: contain;
+}
 .fullpage-wrapper {
   background: white;
 }
@@ -84,10 +89,12 @@ body {
 .fp-controlArrow.fp-prev {
   border-color: transparent #01a2c6 transparent transparent !important;
   border-width: 15px 30px 15px 0px !important;
+  left: 12.5vw !important;
 }
 .fp-controlArrow.fp-next {
   border-color: transparent transparent transparent #01a2c6 !important;
   border-width: 15px 0 15px 30px !important;
+  right: 12.5vw !important;
 }
 .home-bot {
   height: calc(40vh - (125px / 2));
@@ -169,7 +176,7 @@ body {
     height: 5px;
     display: table;
     align-self: center !important;
-    max-width: 80vw !important;
+    max-width: 100% !important;
   }
   .fp-controlArrow.fp-prev {
     left: 0 !important;
@@ -388,12 +395,12 @@ body {
 }
 
 .section-p2 {
-  margin: 0 12.5vw;
+  margin: 0;
   height: calc(100vh - 125px);
   background: white;
 }
 .section-p3 {
-  margin: 0 2.5vw;
+  margin: 0;
   height: calc(100vh - 125px);
   background: white;
 }
@@ -402,7 +409,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0 12.5vw;
+  margin: 0;
   background: white;
 }
 
@@ -536,7 +543,7 @@ body {
   width: 60px;
   height: 72px;
   position: absolute;
-  left: 100%;
+  left: 87.5vw;
   margin-left: -80px;
   bottom: 20px;
 }
@@ -598,8 +605,8 @@ body {
   width: 60px;
   height: 72px;
   position: absolute;
-  left: 0%;
-  margin-left: 20px;
+  right: 87.5vw;
+  margin-right: -80px;
   bottom: 20px;
 }
 
