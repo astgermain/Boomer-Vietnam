@@ -74,14 +74,40 @@ body {
 .margin-div {
   margin: 0 12.5vw;
 }
+
+.slide-section {
+  flex-direction: column;
+  height: calc(100vh) !important;
+  padding-top: 125px !important;
+}
+
+.fp-controlArrow.fp-prev {
+  border-color: transparent #01a2c6 transparent transparent !important;
+  border-width: 15px 30px 15px 0px;
+}
+.fp-controlArrow.fp-next {
+  border-color:  transparent transparent transparent #01a2c6 !important;
+  border-width: 15px 0 15px 30px;
+}
+.home-bot {
+  height: calc(40vh - (125px/2));
+}
+
+.home-slide {
+  height: calc(60vh - (125px/2));
+}
+
 .main-head-h1 {
   text-align: left;
   margin: 15px 0;
   font-size: 2.5rem;
-  line-height: 3rem;
 }
 .section {
   display: flex !important;
+}
+
+.m-section {
+  display: none !important;
 }
 
 .fsection {
@@ -95,14 +121,34 @@ body {
   justify-content: flex-start;
 }
 @media only screen and (max-height: 650px) and (min-width: 961px) {
+  .fp-controlArrow {
+    top: calc(50% + 50px) !important;
+    margin-top: 0px !important;
+  }
   .g-row-start1 {
     height: calc(100vh - 125px) !important;
   }
   .g-row-start2 {
     display: none !important;
   }
+  .home-slide {
+    height: calc(100vh - 100px) !important;
+  }
+  .home-bot {
+    display: none !important;
+  }
 }
 @media only screen and (max-height: 650px) and (max-width: 960px) {
+  .fp-controlArrow {
+    top: calc(50% + 50px) !important;
+    margin-top: 0px !important;
+  }
+  .slide-section {
+    padding-top: 100px !important;
+  }
+  .home-slide {
+    height: calc(100vh - 100px) !important;
+  }
   .g-row-start1 {
     height: calc(100vh - 100px) !important;
   }
@@ -111,6 +157,11 @@ body {
   }
 }
 @media only screen and (max-width: 960px) {
+  .fp-controlArrow {
+    top: calc(50% + 50px) !important;
+    margin-top: 0px !important;
+  }
+  
   .align-left {
     text-align: left;
     margin: 10px 0;
@@ -119,7 +170,7 @@ body {
   .main-head-h1 {
     text-align: left;
     margin: 10px 0;
-    font-size: 1em;
+    font-size: 1.5em;
   }
   .section-p4 {
     margin: 0 2.5vw !important;
@@ -150,7 +201,7 @@ body {
     align-self: center;
     display: flex;
     text-align: center;
-    height: calc(0.65 * (100vh - 100px)) !important;
+    height: calc((100vh - 100px)) !important;
     width: 100%;
   }
   .g-row-start2 {
@@ -176,6 +227,9 @@ body {
     margin: 0 2.5vw;
     height: calc(100vh - 100px) !important;
     background: white;
+  }
+  .home-bot {
+    display: none !important;
   }
 }
 
@@ -437,4 +491,104 @@ body {
 .form-side {
   width: 100%;
   max-width: 500px;
+}
+
+.arrows {
+	width: 60px;
+	height: 72px;
+	position: absolute;
+	left: 100%;
+	margin-left: -30px;
+	bottom: 20px;
+}
+
+.arrows path {
+	stroke: #2994D1;
+	fill: transparent;
+	stroke-width: 1px;	
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {	
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
+.arrows2 {
+	width: 60px;
+	height: 72px;
+	position: absolute;
+	left: 0%;
+	margin-left: -30px;
+	bottom: 20px;
+}
+
+.arrows2 path {
+	stroke: #2994D1;
+	fill: transparent;
+	stroke-width: 1px;	
+	animation: arrow2 2s infinite;
+	-webkit-animation: arrow2 2s infinite; 
+}
+
+@keyframes arrow2
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow2 /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows2 path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows2 path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows2 path.a3 {	
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
+.slide-flex {
+  display: flex !important;
 }

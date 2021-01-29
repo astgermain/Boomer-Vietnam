@@ -42,7 +42,6 @@ const Layout = ({ location, children }) => {
       <div className="margin-div">
       <Helmet>
       <title>Boomer Vietnam</title>
-      <meta name="viewport"content="width=device-width, user-scalable=no" />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"

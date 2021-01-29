@@ -118,23 +118,18 @@ const Header = ({fullpageApi}) => {
           style={{ backgroundColor: "white", height: "125px", display: "flex" }}
         >
           <Grid
-            container
-            direction="row"
-            justify="flex-start"
-            alignItems="center"
-            alignContent="center"
+            item
             xs={5}
+            className="header-center"
           >
             <Link href="#firstPage">
               <img src={Logo} alt="Logo" />
             </Link>
           </Grid>
           <Grid
-            container
-            direction="row"
-            justify="flex-end"
-            alignItems="center"
+            item
             xs={7}
+            className="header-center"
           >
             <Typography
               component="nav"

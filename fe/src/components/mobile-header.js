@@ -125,7 +125,7 @@ const MobileHeader = ({fullpageApi}) => {
             alignContent="center"
             xs={12}
           >
-            <Link href="#firstPage">
+            <Link href="#firstPage2">
               <img src={Logo} alt="Logo" />
             </Link>
             <Button className="ham-button-m" onClick={toggleDrawer(anchor, true)}>{menuIcon()}</Button>

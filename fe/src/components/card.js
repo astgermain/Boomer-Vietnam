@@ -44,6 +44,7 @@ export default function CardGraphic({
   h1text,
   h2text,
   vert,
+  link,
 }) {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;

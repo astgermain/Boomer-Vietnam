@@ -21,6 +21,12 @@
     right: 25px;
 }
 
+.header-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .ham-button {
     margin-bottom: 10px !important;
 }
