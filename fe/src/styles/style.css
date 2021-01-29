@@ -75,6 +75,10 @@ body {
   margin: 0 12.5vw;
 }
 .main-head-h1 {
+  text-align: left;
+  margin: 15px 0;
+  font-size: 2.5rem;
+  line-height: 3rem;
 }
 .section {
   display: flex !important;
@@ -107,6 +111,16 @@ body {
   }
 }
 @media only screen and (max-width: 960px) {
+  .align-left {
+    text-align: left;
+    margin: 10px 0;
+    font-size: 1em;
+  }
+  .main-head-h1 {
+    text-align: left;
+    margin: 10px 0;
+    font-size: 1em;
+  }
   .section-p4 {
     margin: 0 2.5vw !important;
   }
@@ -119,7 +133,7 @@ body {
   .fsection {
     padding-top: 100px !important;
   }
-  
+
   .fsection2 {
     padding-top: 100px !important;
   }
@@ -137,6 +151,7 @@ body {
     display: flex;
     text-align: center;
     height: calc(0.65 * (100vh - 100px)) !important;
+    width: 100%;
   }
   .g-row-start2 {
     justify-content: center;
@@ -162,9 +177,7 @@ body {
     height: calc(100vh - 100px) !important;
     background: white;
   }
-  
 }
-
 
 .p1-button {
   color: white !important;
@@ -184,6 +197,7 @@ body {
   display: flex;
   text-align: center;
   height: calc(0.65 * (100vh - 125px));
+  width: 100%;
 }
 .g-row-start2 {
   justify-content: center;
@@ -211,7 +225,8 @@ body {
 
 .align-left {
   text-align: left;
-  margin: 5px 0;
+  margin: 15px 0;
+  font-size: 1.25em;
 }
 
 .g-row-cell {
@@ -256,13 +271,12 @@ body {
   justify-content: center;
   align-self: center;
   max-height: calc(0.45 * (100vh - 125px));
-  max-width: 100%;
+  max-width: calc(0.25 * 100vw);
 }
 
 .s1-p1-move {
   text-align: left;
   margin-left: 5vw;
-  height: 75%;
 }
 .s1-p1-text {
   font-size: 38px !important;
@@ -270,7 +284,6 @@ body {
 
 .story-text {
   font-size: 3vw;
-  
 }
 
 .g-row-header {
