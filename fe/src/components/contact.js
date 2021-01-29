@@ -163,7 +163,7 @@ const Contact = () => {
         </Alert>
       )}
       <div className="text-side">
-        <h2>Contact Us</h2>
+        <h2 className="align-left story-text">Contact Us</h2>
       </div>
       <div className="form-side">{submitted ? showThankYou : showForm}</div>
     </div>

@@ -80,6 +80,10 @@ body {
   margin: 0 12.5vw;
 }
 
+.st-background {
+  background: #022f42;;
+}
+
 .slide-section {
   flex-direction: column;
   height: calc(100vh) !important;
@@ -164,6 +168,16 @@ body {
   }
 }
 @media only screen and (max-width: 960px) {
+  .g-row-cell-boxes2 {
+    padding-left: 15px !important;
+}
+  .p2-background {
+    background-image: none !important;
+    background: none !important;
+  }
+  .st-background {
+    background: none !important;
+  }
   .header {
     margin-left: -2.5vw !important;
   }

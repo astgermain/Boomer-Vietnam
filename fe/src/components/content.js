@@ -573,7 +573,7 @@ const Content = ({ data, location, width, wasBig, setWasBig }) => {
                 </div>
               </div>
               <div className="section fsection">
-              <div className="p2-background">
+              <div className="st-background">
                 <div className="margin-div">
                   <section className="section-p3">
                     <Grid container className="g-row">
