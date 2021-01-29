@@ -179,10 +179,12 @@ const Content = ({ data, location, width, wasBig, setWasBig }) => {
                     <Grid item lg={12} className="g-row-start1">
                       <Grid item xs={5} className="g-row-cell">
                         <Grid item xs={12} className="g-row-cell-s1">
+                        <Hidden smDown>
                           <img
                             src="./static/homeimg2.png"
                             className="s1-image"
                           ></img>
+                          </Hidden>
                         </Grid>
                       </Grid>
 
@@ -229,10 +231,12 @@ const Content = ({ data, location, width, wasBig, setWasBig }) => {
                     <Grid item lg={12} className="g-row-start1">
                       <Grid item xs={5} className="g-row-cell">
                         <Grid item xs={12} className="g-row-cell-s1">
+                        <Hidden smDown>
                           <img
                             src="./static/homeimg3.png"
                             className="s1-image"
                           ></img>
+                          </Hidden>
                         </Grid>
                       </Grid>
 
@@ -277,10 +281,12 @@ const Content = ({ data, location, width, wasBig, setWasBig }) => {
                     <Grid item lg={12} className="g-row-start1">
                       <Grid item xs={5} className="g-row-cell">
                         <Grid item xs={12} className="g-row-cell-s1">
+                        <Hidden smDown>
                           <img
                             src="./static/homeimg4.png"
                             className="s1-image"
                           ></img>
+                          </Hidden>
                         </Grid>
                       </Grid>
 
@@ -325,10 +331,12 @@ const Content = ({ data, location, width, wasBig, setWasBig }) => {
                     <Grid item lg={12} className="g-row-start1">
                       <Grid item xs={5} className="g-row-cell">
                         <Grid item xs={12} className="g-row-cell-s1">
+                        <Hidden smDown>
                           <img
                             src="./static/homeimg5.png"
                             className="s1-image"
                           ></img>
+                          </Hidden>
                         </Grid>
                       </Grid>
 
