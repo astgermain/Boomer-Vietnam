@@ -374,7 +374,7 @@ const Content = ({ data, location, width, wasBig, setWasBig }) => {
                   </div>
                 </Grid>
                 <Hidden mdUp>
-                <div>
+                  <div>
                     <svg class="arrowsc">
                       <path class="a1" d="M0 0 L30 32 L60 0"></path>
                       <path class="a2" d="M0 20 L30 52 L60 20"></path>
@@ -395,54 +395,54 @@ const Content = ({ data, location, width, wasBig, setWasBig }) => {
                       <path class="a3" d="M0 40 L30 72 L60 40"></path>
                     </svg>
                   </div>
-                  </Hidden>
+                </Hidden>
                 <Grid item xs={12} className="home-bot">
                   <Hidden smDown>
-                  <Grid container className="g-row-start2">
-                    {/* <h1>Click to learn more</h1> */}
-                    <Grid item xs={12} className="g-row-cell-s2 infographics">
-                      <CardGraphic
-                        svg="check"
-                        h1text="Benefits"
-                        h2text="Why Vietnam-Based Manufacturing"
-                        link="/#firstPage/1"
-                        hasColor={plan}
-                        handleChange={() =>
-                          handlePlan(fullpageApi.moveTo("firstPage", 1))
-                        }
-                      />
-                      <CardGraphic
-                        svg="building"
-                        h1text="Labor Force"
-                        h2text="Learn About Our Hard Workers"
-                        link="/#firstPage/2"
-                        hasColor={find}
-                        handleChange={() =>
-                          handleFind(fullpageApi.moveTo("firstPage", 2))
-                        }
-                      />
-                      <CardGraphic
-                        svg="world"
-                        h1text="Logistics"
-                        h2text="Our Superior Logistic Network With Faster Times And Lower Cost"
-                        link="/#firstPage/3"
-                        hasColor={make}
-                        handleChange={() =>
-                          handleMake(fullpageApi.moveTo("firstPage", 3))
-                        }
-                      />
-                      <CardGraphic
-                        svg="clipboard"
-                        h1text="Product Manufacturing"
-                        h2text="Learn About The High Qualitys Made In Vietnam"
-                        link="/#firstPage/4"
-                        hasColor={ship}
-                        handleChange={() =>
-                          handleShip(fullpageApi.moveTo("firstPage", 4))
-                        }
-                      />
+                    <Grid container className="g-row-start2">
+                      {/* <h1>Click to learn more</h1> */}
+                      <Grid item xs={12} className="g-row-cell-s2 infographics">
+                        <CardGraphic
+                          svg="check"
+                          h1text="Benefits"
+                          h2text="Why Vietnam-Based Manufacturing"
+                          link="/#firstPage/1"
+                          hasColor={plan}
+                          handleChange={() =>
+                            handlePlan(fullpageApi.moveTo("firstPage", 1))
+                          }
+                        />
+                        <CardGraphic
+                          svg="building"
+                          h1text="Labor Force"
+                          h2text="Learn About Our Hard Workers"
+                          link="/#firstPage/2"
+                          hasColor={find}
+                          handleChange={() =>
+                            handleFind(fullpageApi.moveTo("firstPage", 2))
+                          }
+                        />
+                        <CardGraphic
+                          svg="world"
+                          h1text="Logistics"
+                          h2text="Our Superior Logistic Network With Faster Times And Lower Cost"
+                          link="/#firstPage/3"
+                          hasColor={make}
+                          handleChange={() =>
+                            handleMake(fullpageApi.moveTo("firstPage", 3))
+                          }
+                        />
+                        <CardGraphic
+                          svg="clipboard"
+                          h1text="Product Manufacturing"
+                          h2text="Learn About The High Qualitys Made In Vietnam"
+                          link="/#firstPage/4"
+                          hasColor={ship}
+                          handleChange={() =>
+                            handleShip(fullpageApi.moveTo("firstPage", 4))
+                          }
+                        />
+                      </Grid>
                     </Grid>
-                  </Grid>
                   </Hidden>
                   <div>
                     <svg class="arrows">
@@ -473,78 +473,89 @@ const Content = ({ data, location, width, wasBig, setWasBig }) => {
               <div className="section fsection2">
                 <div className="p2-background">
                   <section className="section-p2">
-                      <Grid container className="g-row">
-                        <Grid container className="g-row-start3">
-                          <Grid item xs={12} className="g-row-cell">
-                            <Hidden mdDown>
-                              <Grid item xs={6} className="g-row-cell-boxes">
-                                <img
-                                  src="./static/section2img.png"
-                                  className="box-image"
-                                ></img>
-                              </Grid>
-                            </Hidden>
-                            <Grid
-                              item
-                              sm={10}
-                              md={8}
-                              lg={6}
-                              className="g-row-cell-boxes2 boxes"
-                            >
-                              <Grid className="box-container" item lg={12}>
-                                <Paper className="box">
-                                  <CardGraphic
-                                    svg="p1"
-                                    hasColor2={p1}
-                                    h1text={"U.S. Based Headquarters"}
-                                    vert={true}
-                                    handleChange={handleP1}
-                                  />
-                                </Paper>
-                              </Grid>
-                              <Grid className="box-container" item lg={12}>
-                                <Paper className="box">
-                                  <CardGraphic
-                                    svg="p2"
-                                    isBox={true}
-                                    hasColor2={p2}
-                                    h1text={"Fast Turnaround Time"}
-                                    vert={true}
-                                    handleChange={handleP2}
-                                  />
-                                </Paper>
-                              </Grid>
-                              <Grid className="box-container" item lg={12}>
-                                <Paper className="box">
-                                  <CardGraphic
-                                    svg="p3"
-                                    isBox={true}
-                                    hasColor2={p3}
-                                    h1text={"Top Manufacturing Practices"}
-                                    vert={true}
-                                    handleChange={handleP3}
-                                  />
-                                </Paper>
-                              </Grid>
+                    <Grid container className="g-row">
+                      <Grid container className="g-row-start3">
+                        <Grid item xs={12} className="g-row-cell">
+                          <Hidden mdDown>
+                            <Grid item xs={6} className="g-row-cell-boxes">
+                              <img
+                                src="./static/section2img.png"
+                                className="box-image"
+                              ></img>
+                            </Grid>
+                          </Hidden>
+                          <Grid
+                            item
+                            sm={10}
+                            md={8}
+                            lg={6}
+                            className="g-row-cell-boxes2 boxes"
+                          >
+                            <Grid className="box-container" item lg={12}>
+                              <Paper className="box">
+                                <CardGraphic
+                                  svg="p1"
+                                  hasColor2={p1}
+                                  h1text={"U.S. Based Headquarters"}
+                                  vert={true}
+                                  handleChange={handleP1}
+                                />
+                              </Paper>
+                            </Grid>
+                            <Grid className="box-container" item lg={12}>
+                              <Paper className="box">
+                                <CardGraphic
+                                  svg="p2"
+                                  isBox={true}
+                                  hasColor2={p2}
+                                  h1text={"Fast Turnaround Time"}
+                                  vert={true}
+                                  handleChange={handleP2}
+                                />
+                              </Paper>
+                            </Grid>
+                            <Grid className="box-container" item lg={12}>
+                              <Paper className="box">
+                                <CardGraphic
+                                  svg="p3"
+                                  isBox={true}
+                                  hasColor2={p3}
+                                  h1text={"Top Manufacturing Practices"}
+                                  vert={true}
+                                  handleChange={handleP3}
+                                />
+                              </Paper>
                             </Grid>
                           </Grid>
                         </Grid>
                       </Grid>
-                    
-                    <div>
-                      <svg class="arrows">
-                        <path class="a1" d="M0 0 L30 32 L60 0"></path>
-                        <path class="a2" d="M0 20 L30 52 L60 20"></path>
-                        <path class="a3" d="M0 40 L30 72 L60 40"></path>
-                      </svg>
-                    </div>
-                    <div>
-                      <svg class="arrows2">
-                        <path class="a1" d="M0 0 L30 32 L60 0"></path>
-                        <path class="a2" d="M0 20 L30 52 L60 20"></path>
-                        <path class="a3" d="M0 40 L30 72 L60 40"></path>
-                      </svg>
-                    </div>
+                    </Grid>
+
+                    <Hidden mdUp>
+                      <div>
+                        <svg class="arrowsc">
+                          <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                          <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                          <path class="a3" d="M0 40 L30 72 L60 40"></path>
+                        </svg>
+                      </div>
+                    </Hidden>
+                    <Hidden smDown>
+                      <div>
+                        <svg class="arrows">
+                          <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                          <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                          <path class="a3" d="M0 40 L30 72 L60 40"></path>
+                        </svg>
+                      </div>
+                      <div>
+                        <svg class="arrows2">
+                          <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                          <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                          <path class="a3" d="M0 40 L30 72 L60 40"></path>
+                        </svg>
+                      </div>
+                    </Hidden>
                   </section>
                 </div>
               </div>
@@ -631,39 +642,61 @@ const Content = ({ data, location, width, wasBig, setWasBig }) => {
                   </Grid>
                   */}
                   </Grid>
-                  <div>
-                    <svg class="arrows">
-                      <path class="a1" d="M0 0 L30 32 L60 0"></path>
-                      <path class="a2" d="M0 20 L30 52 L60 20"></path>
-                      <path class="a3" d="M0 40 L30 72 L60 40"></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <svg class="arrows2">
-                      <path class="a1" d="M0 0 L30 32 L60 0"></path>
-                      <path class="a2" d="M0 20 L30 52 L60 20"></path>
-                      <path class="a3" d="M0 40 L30 72 L60 40"></path>
-                    </svg>
-                  </div>
+                  <Hidden mdUp>
+                    <div>
+                      <svg class="arrowsc">
+                        <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                        <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                        <path class="a3" d="M0 40 L30 72 L60 40"></path>
+                      </svg>
+                    </div>
+                  </Hidden>
+                  <Hidden smDown>
+                    <div>
+                      <svg class="arrows">
+                        <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                        <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                        <path class="a3" d="M0 40 L30 72 L60 40"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <svg class="arrows2">
+                        <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                        <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                        <path class="a3" d="M0 40 L30 72 L60 40"></path>
+                      </svg>
+                    </div>
+                  </Hidden>
                 </section>
               </div>
               <div className="section fsection">
                 <section className="section-p4">
                   <Contact />
-                  <div>
-                    <svg class="arrows">
-                      <path class="a1" d="M0 0 L30 32 L60 0"></path>
-                      <path class="a2" d="M0 20 L30 52 L60 20"></path>
-                      <path class="a3" d="M0 40 L30 72 L60 40"></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <svg class="arrows2">
-                      <path class="a1" d="M0 0 L30 32 L60 0"></path>
-                      <path class="a2" d="M0 20 L30 52 L60 20"></path>
-                      <path class="a3" d="M0 40 L30 72 L60 40"></path>
-                    </svg>
-                  </div>
+                  <Hidden mdUp>
+                    <div>
+                      <svg class="arrowsc">
+                        <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                        <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                        <path class="a3" d="M0 40 L30 72 L60 40"></path>
+                      </svg>
+                    </div>
+                  </Hidden>
+                  <Hidden smDown>
+                    <div>
+                      <svg class="arrows">
+                        <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                        <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                        <path class="a3" d="M0 40 L30 72 L60 40"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <svg class="arrows2">
+                        <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                        <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                        <path class="a3" d="M0 40 L30 72 L60 40"></path>
+                      </svg>
+                    </div>
+                  </Hidden>
                 </section>
               </div>
               <div className="section fp-auto-height">
