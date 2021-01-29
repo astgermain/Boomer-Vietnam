@@ -122,7 +122,7 @@ const Content = ({ data, location, width, wasBig, setWasBig }) => {
       pluginWrapper={pluginWrapper}
       //fullpage options
       licenseKey={"8734D589-74E74CC7-AA2B9E45-33B07FC5"}
-      scrollingSpeed={1000} /* Options here */
+      scrollingSpeed={500} /* Options here */
       menu="#header"
       anchors={["firstPage", "secondPage", "thirdPage", "fourthPage"]}
       render={({ state, fullpageApi }) => {
@@ -143,7 +143,7 @@ const Content = ({ data, location, width, wasBig, setWasBig }) => {
                           </Grid>
                         </Grid>
                       </Hidden>
-                      <Grid item xs={7} className="g-row-cell">
+                      <Grid item sm={10} md={7} className="g-row-cell">
                         <Grid item xs={12} className="s1-p1-move">
                           <Grid
                             item
@@ -373,6 +373,29 @@ const Content = ({ data, location, width, wasBig, setWasBig }) => {
                     </Grid>
                   </div>
                 </Grid>
+                <Hidden mdUp>
+                <div>
+                    <svg class="arrowsc">
+                      <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                      <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                      <path class="a3" d="M0 40 L30 72 L60 40"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <svg class="arrowsl">
+                      <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                      <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                      <path class="a3" d="M0 40 L30 72 L60 40"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <svg class="arrowsr">
+                      <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                      <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                      <path class="a3" d="M0 40 L30 72 L60 40"></path>
+                    </svg>
+                  </div>
+                  </Hidden>
                 <Grid item xs={12} className="home-bot">
                   <Hidden smDown>
                   <Grid container className="g-row-start2">
